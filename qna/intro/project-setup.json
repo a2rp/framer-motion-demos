@@ -1,0 +1,491 @@
+{
+    "version": "1.0",
+    "project": "reactjs-notes",
+    "generated_at": "2025-09-20",
+    "topic_id": "intro",
+    "topic_title": "Intro",
+    "total_questions": 30,
+    "sections": [
+        {
+            "id": "project-setup",
+            "title": "Project Setup",
+            "slug": "project-setup",
+            "questions": [
+                {
+                    "qid": "intro-project-setup-001",
+                    "question": "What’s the recommended way to start a modern React app?",
+                    "answer_short": "Use Vite (or Next.js if you need SSR/RSC). Vite gives fast dev server, sensible defaults, and tiny config.",
+                    "code_short": "npm create vite@latest my-app -- --template react",
+                    "notes_ref": "/notes-reactjs/intro/project-setup",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "starter",
+                    "tags": [
+                        "vite",
+                        "scaffold",
+                        "starter"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-002",
+                    "question": "Why not use Create React App (CRA) in 2025?",
+                    "answer_short": "CRA is unmaintained and slow compared to Vite/Next. Migrations generally favor Vite or Next.js.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/project-setup",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "starter",
+                    "tags": [
+                        "CRA",
+                        "Vite",
+                        "Next"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-003",
+                    "question": "What does Vite’s project structure look like?",
+                    "answer_short": "`index.html` at root, `src/` for code, `public/` for static assets served as-is.",
+                    "code_short": "my-app/\n  index.html\n  src/main.jsx\n  src/App.jsx\n  public/…",
+                    "notes_ref": "/notes-reactjs/intro/project-setup",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "structure",
+                    "tags": [
+                        "structure",
+                        "folders"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-004",
+                    "question": "How do you mount a React app with React 18?",
+                    "answer_short": "Use `createRoot(container).render(<App />)` targeting the `#root` element.",
+                    "code_short": "import {createRoot} from 'react-dom/client'\ncreateRoot(document.getElementById('root')).render(<App/>)",
+                    "notes_ref": "/notes-reactjs/intro/project-setup",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "root",
+                    "tags": [
+                        "createRoot",
+                        "mount"
+                    ],
+                    "related": [
+                        "intro-what-is-react-025"
+                    ]
+                },
+                {
+                    "qid": "intro-project-setup-005",
+                    "question": "How to run and build with Vite?",
+                    "answer_short": "`npm run dev` to start, `npm run build` to bundle, `npm run preview` to preview the build.",
+                    "code_short": "scripts: {\n  \"dev\":\"vite\",\n  \"build\":\"vite build\",\n  \"preview\":\"vite preview\"\n}",
+                    "notes_ref": "/notes-reactjs/intro/pkg-scripts",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "scripts",
+                    "tags": [
+                        "scripts",
+                        "build",
+                        "preview"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-006",
+                    "question": "Where do public assets go vs imported assets?",
+                    "answer_short": "`public/` files are served at base URL. Imported assets in `src` are processed and hashed by the bundler.",
+                    "code_short": "/* public/logo.png → /logo.png */\nimport img from './assets/logo.png'",
+                    "notes_ref": "/notes-reactjs/intro/project-setup",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "assets",
+                    "tags": [
+                        "public",
+                        "assets",
+                        "hash"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-007",
+                    "question": "How to reference files from `public/` in Vite?",
+                    "answer_short": "Use absolute paths relative to `base`. In dev it’s `/`, on GH Pages it’s `/<repo>/`.",
+                    "code_short": "<img src={`${import.meta.env.BASE_URL}logo.png`} />",
+                    "notes_ref": "/notes-reactjs/intro/project-setup",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "assets",
+                    "tags": [
+                        "public",
+                        "base",
+                        "vite"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-008",
+                    "question": "How to set base path for GH Pages in Vite?",
+                    "answer_short": "Set `base: \"/<repo>/\"` in `vite.config` so assets and routes resolve correctly.",
+                    "code_short": "export default { base: \"/notes-reactjs/\" }",
+                    "notes_ref": "/notes-reactjs/deployment/github-pages",
+                    "difficulty": "easy",
+                    "topic": "deployment",
+                    "subtopic": "gh-pages",
+                    "tags": [
+                        "vite",
+                        "base",
+                        "gh-pages"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-024"
+                    ]
+                },
+                {
+                    "qid": "intro-project-setup-009",
+                    "question": "How to configure SPA routing on GH Pages refresh?",
+                    "answer_short": "Use hash routing or a 404.html fallback that redirects to index with the original path.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/deployment/github-pages",
+                    "difficulty": "medium",
+                    "topic": "deployment",
+                    "subtopic": "fallback",
+                    "tags": [
+                        "routing",
+                        "404",
+                        "history"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-024",
+                        "intro-spa-vs-mpa-019"
+                    ]
+                },
+                {
+                    "qid": "intro-project-setup-010",
+                    "question": "How do `.env` files work in Vite?",
+                    "answer_short": "Vars must start with `VITE_` and are exposed as `import.meta.env.VITE_*`. Different files per mode.",
+                    "code_short": "VITE_API_URL=https://api.example.com",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": ".env",
+                    "tags": [
+                        "env",
+                        "VITE_",
+                        "config"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-011",
+                    "question": "Which `.env` file loads by default?",
+                    "answer_short": "`.env` always loads; `.env.development` for dev; `.env.production` for build; `.env.local` variants are git-ignored.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": ".env",
+                    "tags": [
+                        "env",
+                        "modes"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-012",
+                    "question": "How to avoid leaking secrets in the client?",
+                    "answer_short": "Never put secrets in Vite `.env` (client-visible). Keep them on the server or use proxies.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/security/basics",
+                    "difficulty": "medium",
+                    "topic": "security",
+                    "subtopic": "secrets",
+                    "tags": [
+                        "secrets",
+                        "env",
+                        "client"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-013",
+                    "question": "How to set up absolute imports/aliases in Vite?",
+                    "answer_short": "Add `resolve.alias` in `vite.config` (e.g., `@` → `src`).",
+                    "code_short": "resolve:{ alias:{ \"@\": fileURLToPath(new URL('./src',import.meta.url)) } }",
+                    "notes_ref": "/notes-reactjs/intro/project-setup",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "alias",
+                    "tags": [
+                        "alias",
+                        "imports"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-014",
+                    "question": "How to add styled-components?",
+                    "answer_short": "Install, then use normally; optional SWC/Babel plugin for better debugging.",
+                    "code_short": "npm i styled-components\n// vite + swc plugin optional",
+                    "notes_ref": "/notes-reactjs/styling/styled-components",
+                    "difficulty": "easy",
+                    "topic": "styling",
+                    "subtopic": "styled-components",
+                    "tags": [
+                        "styled-components",
+                        "css-in-js"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-015",
+                    "question": "How to enable ESLint + Prettier quickly?",
+                    "answer_short": "Install ESLint, Prettier, React plugin; add config and a `format` script; consider VSCode extensions.",
+                    "code_short": "npm i -D eslint prettier eslint-plugin-react\nnpm run lint -- --fix",
+                    "notes_ref": "/notes-reactjs/intro/debugging",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "lint",
+                    "tags": [
+                        "eslint",
+                        "prettier"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-016",
+                    "question": "What Node.js version should you target?",
+                    "answer_short": "Use active LTS (≥18) across dev/CI. Pin via `.nvmrc` or `engines` in package.json.",
+                    "code_short": "\"engines\": { \"node\": \">=18\" }",
+                    "notes_ref": "/notes-reactjs/intro/project-setup",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "node",
+                    "tags": [
+                        "node",
+                        "engines",
+                        "lts"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-017",
+                    "question": "How to proxy API requests in Vite dev to avoid CORS?",
+                    "answer_short": "Use `server.proxy` to forward `/api` to your backend during dev.",
+                    "code_short": "server:{ proxy:{ \"/api\": { target:\"http://localhost:4000\", changeOrigin:true } } }",
+                    "notes_ref": "/notes-reactjs/networking/dev-proxy",
+                    "difficulty": "medium",
+                    "topic": "networking",
+                    "subtopic": "proxy",
+                    "tags": [
+                        "proxy",
+                        "CORS",
+                        "dev"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-018",
+                    "question": "How to import SVGs?",
+                    "answer_short": "As URL via `import logo from './logo.svg'` or as React component using a plugin or manual inlining.",
+                    "code_short": "import logo from './logo.svg'\n<img src={logo} alt=\"\"/>",
+                    "notes_ref": "/notes-reactjs/intro/project-setup",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "assets",
+                    "tags": [
+                        "svg",
+                        "assets"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-019",
+                    "question": "CSS options out of the box?",
+                    "answer_short": "Global CSS, CSS modules, PostCSS. You can add Tailwind, styled-components, or other solutions.",
+                    "code_short": "import styles from './Button.module.css'",
+                    "notes_ref": "/notes-reactjs/styling/overview",
+                    "difficulty": "easy",
+                    "topic": "styling",
+                    "subtopic": "css",
+                    "tags": [
+                        "css-modules",
+                        "postcss"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-020",
+                    "question": "How to set source maps and build target?",
+                    "answer_short": "Vite enables sourcemaps in dev; for prod, `build.sourcemap: true`. Set `build.target` if needed.",
+                    "code_short": "build:{ sourcemap:true, target:\"es2019\" }",
+                    "notes_ref": "/notes-reactjs/intro/debugging",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "build",
+                    "tags": [
+                        "sourcemap",
+                        "target"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-021",
+                    "question": "Tree-shaking/code-splitting basics?",
+                    "answer_short": "Use ESM imports; lazy-load routes/components with `React.lazy`; keep dead code out of the bundle.",
+                    "code_short": "const Page = React.lazy(()=>import('./Page'))",
+                    "notes_ref": "/notes-reactjs/suspense-code-splitting/lazy",
+                    "difficulty": "easy",
+                    "topic": "suspense-code-splitting",
+                    "subtopic": "lazy",
+                    "tags": [
+                        "code-splitting",
+                        "tree-shaking"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-022",
+                    "question": "How to setup path-aware links in a subfolder deploy?",
+                    "answer_short": "Prefix paths with `import.meta.env.BASE_URL` or your own helper to avoid broken links.",
+                    "code_short": "<a href={`${import.meta.env.BASE_URL}docs`}>Docs</a>",
+                    "notes_ref": "/notes-reactjs/deployment/github-pages",
+                    "difficulty": "medium",
+                    "topic": "deployment",
+                    "subtopic": "base",
+                    "tags": [
+                        "base",
+                        "links"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-023",
+                    "question": "What should be in `.gitignore` for a React app?",
+                    "answer_short": "`node_modules`, build output (`dist/`), local env (`.env.local`), editor caches.",
+                    "code_short": "dist/\nnode_modules/\n.env.local",
+                    "notes_ref": "/notes-reactjs/intro/project-setup",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "gitignore",
+                    "tags": [
+                        "gitignore",
+                        "dist",
+                        "env"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-024",
+                    "question": "Prettier/ESLint on commit?",
+                    "answer_short": "Use Husky + lint-staged to run format/lint on staged files.",
+                    "code_short": "npx husky add .husky/pre-commit \"npx lint-staged\"",
+                    "notes_ref": "/notes-reactjs/intro/debugging",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "quality",
+                    "tags": [
+                        "husky",
+                        "lint-staged"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-025",
+                    "question": "How to configure JSX runtime?",
+                    "answer_short": "Vite React plugin uses the automatic runtime; no need to import React for JSX.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/project-setup",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "jsx-runtime",
+                    "tags": [
+                        "jsx",
+                        "automatic-runtime"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-026",
+                    "question": "How to add testing quickly?",
+                    "answer_short": "Use Vitest + React Testing Library for unit/component tests.",
+                    "code_short": "npm i -D vitest @testing-library/react jsdom",
+                    "notes_ref": "/notes-reactjs/testing/overview",
+                    "difficulty": "medium",
+                    "topic": "testing",
+                    "subtopic": "vitest",
+                    "tags": [
+                        "testing",
+                        "vitest",
+                        "rtl"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-027",
+                    "question": "How to split env per preview vs prod?",
+                    "answer_short": "Use `--mode` when building/previewing or separate `.env.preview` vs `.env.production`.",
+                    "code_short": "vite build --mode preview\nvite preview --mode preview",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "env-modes",
+                    "tags": [
+                        "mode",
+                        "env"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-project-setup-028",
+                    "question": "How do you add an alias import example in code?",
+                    "answer_short": "Once `@` maps to `src`, import like `import Button from '@/components/Button.jsx'`.",
+                    "code_short": "import Button from \"@/components/Button.jsx\"",
+                    "notes_ref": "/notes-reactjs/intro/project-setup",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "alias",
+                    "tags": [
+                        "alias",
+                        "imports"
+                    ],
+                    "related": [
+                        "intro-project-setup-013"
+                    ]
+                },
+                {
+                    "qid": "intro-project-setup-029",
+                    "question": "How to set React StrictMode in Vite entry?",
+                    "answer_short": "Wrap `<App />` with `<React.StrictMode>` in `main.jsx` (dev-only effect checks).",
+                    "code_short": "createRoot(el).render(\n  <React.StrictMode>\n    <App/>\n  </React.StrictMode>\n)",
+                    "notes_ref": "/notes-reactjs/intro/strict-mode",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "strict-mode",
+                    "tags": [
+                        "strict-mode",
+                        "dev"
+                    ],
+                    "related": [
+                        "intro-what-is-react-019"
+                    ]
+                },
+                {
+                    "qid": "intro-project-setup-030",
+                    "question": "Quick checklist before first commit?",
+                    "answer_short": "Set Node LTS, base path, env files, alias, ESLint/Prettier, GitHub Actions (optional), and README with run/build steps.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/project-setup",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "checklist",
+                    "tags": [
+                        "checklist",
+                        "setup"
+                    ],
+                    "related": []
+                }
+            ]
+        }
+    ]
+}

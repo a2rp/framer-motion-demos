@@ -1,0 +1,481 @@
+{
+    "version": "1.0",
+    "project": "reactjs-notes",
+    "generated_at": "2025-09-20",
+    "topic_id": "intro",
+    "topic_title": "Intro",
+    "total_questions": 28,
+    "sections": [
+        {
+            "id": "what-is-react",
+            "title": "What Is React ???",
+            "slug": "what-is-react",
+            "questions": [
+                {
+                    "qid": "intro-what-is-react-001",
+                    "question": "What is React in one sentence?",
+                    "answer_short": "React is a JavaScript library for building user interfaces by composing reusable components and updating the DOM efficiently when state changes.",
+                    "code_short": "function App(){\n  return <h1>Hello React</h1>\n}\n",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "definition",
+                        "components",
+                        "UI"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-what-is-react-002",
+                    "question": "Is React a framework or a library?",
+                    "answer_short": "React is a library focused on the view layer. Framework-like behavior comes from the ecosystem (routing, state, build tooling).",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "library",
+                        "framework"
+                    ],
+                    "related": [
+                        "intro-what-is-react-015"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-003",
+                    "question": "What problem does React primarily solve?",
+                    "answer_short": "It manages UI complexity by modeling UI as a function of state and efficiently updating views when state changes.",
+                    "code_short": "function Counter(){\n  const [n,setN]=React.useState(0)\n  return <button onClick={()=>setN(n+1)}>{n}</button>\n}",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "state",
+                        "UI",
+                        "render"
+                    ],
+                    "related": [
+                        "intro-what-is-react-004"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-004",
+                    "question": "Explain 'UI = f(state)' in React.",
+                    "answer_short": "The rendered UI is a pure description derived from current state; change state → React re-renders to match the new state.",
+                    "code_short": "function Greeting({name}){\n  return <p>Hello {name || 'Guest'}</p>\n}",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "declarative",
+                        "state"
+                    ],
+                    "related": [
+                        "intro-what-is-react-003"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-005",
+                    "question": "What is a React component?",
+                    "answer_short": "A component is a reusable piece of UI defined as a function (or class) that returns elements and can accept props.",
+                    "code_short": "function Badge({text}){\n  return <span className=\"badge\">{text}</span>\n}",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "components",
+                        "props"
+                    ],
+                    "related": [
+                        "intro-what-is-react-006"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-006",
+                    "question": "What are props in React?",
+                    "answer_short": "Props are read-only inputs to components that let parents configure children.",
+                    "code_short": "function Avatar({src,alt}){\n  return <img src={src} alt={alt} />\n}",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "props",
+                        "inputs"
+                    ],
+                    "related": [
+                        "intro-what-is-react-005"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-007",
+                    "question": "What is the Virtual DOM?",
+                    "answer_short": "A lightweight in-memory tree React uses to compute minimal DOM changes after state updates.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "virtual-dom",
+                        "reconciliation"
+                    ],
+                    "related": [
+                        "intro-what-is-react-008"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-008",
+                    "question": "What is reconciliation in React?",
+                    "answer_short": "It’s the diffing process that compares previous and next trees to apply the smallest DOM mutations.",
+                    "code_short": "function List({items}){\n  return <ul>{items.map(i=>\n    <li key={i.id}>{i.label}</li>\n  )}</ul>\n}",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "keys",
+                        "diffing"
+                    ],
+                    "related": [
+                        "intro-what-is-react-007",
+                        "intro-what-is-react-009"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-009",
+                    "question": "Why are keys important in lists?",
+                    "answer_short": "Keys give stable identity to list items, helping React match elements between renders and avoid incorrect updates.",
+                    "code_short": "const rows = data.map(row => (\n  <tr key={row.id}><td>{row.name}</td></tr>\n))",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "keys",
+                        "lists"
+                    ],
+                    "related": [
+                        "intro-what-is-react-008"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-010",
+                    "question": "What is JSX?",
+                    "answer_short": "JSX is a syntax extension that lets you write element trees with XML-like syntax which compile to `React.createElement` calls.",
+                    "code_short": "const el = <button className=\"btn\">Click</button>;\n// compiles to React.createElement(...)\n",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "jsx",
+                        "syntax"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-what-is-react-011",
+                    "question": "Can you use React without JSX?",
+                    "answer_short": "Yes. JSX is optional; you can call `createElement` directly, but JSX is more ergonomic.",
+                    "code_short": "const el = React.createElement(\n  'h1', {className:'t'}, 'Hello'\n);",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "jsx",
+                        "createElement"
+                    ],
+                    "related": [
+                        "intro-what-is-react-010"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-012",
+                    "question": "What does 'declarative' mean in React?",
+                    "answer_short": "You describe the desired UI for a given state; React figures out how to update the DOM efficiently.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "declarative"
+                    ],
+                    "related": [
+                        "intro-what-is-react-004"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-013",
+                    "question": "How is React different from jQuery-style DOM manipulation?",
+                    "answer_short": "React avoids manual DOM mutations; you re-render based on state, and React applies minimal changes automatically.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "dom",
+                        "imperative-vs-declarative"
+                    ],
+                    "related": [
+                        "intro-what-is-react-012"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-014",
+                    "question": "Does React handle routing, data fetching, and state by itself?",
+                    "answer_short": "No. React focuses on UI. Routing, data fetching, and app-level state rely on libraries (React Router, React Query, Redux, etc.).",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "ecosystem",
+                        "routing",
+                        "state"
+                    ],
+                    "related": [
+                        "intro-what-is-react-002"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-015",
+                    "question": "Why is React often called 'just the view layer'?",
+                    "answer_short": "It renders views from state and props; architecture beyond the view is intentionally unopinionated and delegated to the ecosystem.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "view-layer",
+                        "unopinionated"
+                    ],
+                    "related": [
+                        "intro-what-is-react-002",
+                        "intro-what-is-react-014"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-016",
+                    "question": "What is React 18's concurrent rendering (at a high level)?",
+                    "answer_short": "It lets React prepare multiple UI versions in the background and interrupt rendering, improving responsiveness under load.",
+                    "code_short": "function App(){\n  const [q,setQ]=React.useState('')\n  return <input value={q} onChange={e=>setQ(e.target.value)} />\n}",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "concurrency",
+                        "react-18"
+                    ],
+                    "related": [
+                        "intro-what-is-react-017"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-017",
+                    "question": "What are transitions in React?",
+                    "answer_short": "Transitions mark non-urgent state updates (like route/content switches) so urgent ones (typing, clicks) stay snappy.",
+                    "code_short": "const [isPending,startTransition]=React.useTransition();\nstartTransition(()=>setPage('details'));\n",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "useTransition",
+                        "concurrency"
+                    ],
+                    "related": [
+                        "intro-what-is-react-016"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-018",
+                    "question": "What’s the difference between React and ReactDOM?",
+                    "answer_short": "React provides the component model. ReactDOM connects React to the web DOM; React Native targets mobile.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "reactdom",
+                        "react-native"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-what-is-react-019",
+                    "question": "What is Strict Mode in React (concept-only here)?",
+                    "answer_short": "A development-only tool that highlights potential problems by intentionally re-invoking certain lifecycles and checks.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/strict-mode",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "strict-mode",
+                    "tags": [
+                        "strict-mode",
+                        "dev-only"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-what-is-react-020",
+                    "question": "How does React encourage reusability?",
+                    "answer_short": "By composing small components and sharing logic via hooks and props rather than inheritance.",
+                    "code_short": "function Title({as:Tag='h2',children}){\n  return <Tag className=\"title\">{children}</Tag>\n}",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "composition",
+                        "reusability"
+                    ],
+                    "related": [
+                        "intro-what-is-react-005"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-021",
+                    "question": "Analogy: How to explain React to a non-developer?",
+                    "answer_short": "Like a dashboard that updates itself: you change the data, and the right widgets refresh automatically.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "analogy"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-what-is-react-022",
+                    "question": "How do class components relate to modern React?",
+                    "answer_short": "They’re legacy-compatible, but hooks-based function components are the current standard for new code.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "classes",
+                        "hooks"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-what-is-react-023",
+                    "question": "Does React require a build step?",
+                    "answer_short": "JSX typically needs a build step (Vite, webpack, SWC), but you can use React without JSX or with CDN + Babel in dev.",
+                    "code_short": "<script src=\"https://unpkg.com/react@18/umd/react.development.js\"></script>",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "tooling",
+                    "tags": [
+                        "build",
+                        "vite",
+                        "babel"
+                    ],
+                    "related": [
+                        "intro-what-is-react-011"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-024",
+                    "question": "How does React compare to frameworks like Angular or Vue?",
+                    "answer_short": "React is minimal and flexible; Angular is a batteries-included framework; Vue sits in-between with a cohesive core.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "comparison",
+                    "tags": [
+                        "comparison",
+                        "frameworks"
+                    ],
+                    "related": [
+                        "intro-what-is-react-002",
+                        "intro-what-is-react-014"
+                    ]
+                },
+                {
+                    "qid": "intro-what-is-react-025",
+                    "question": "What is a 'root' in React DOM?",
+                    "answer_short": "A root is the mounting point created by `createRoot(container)` where your component tree renders.",
+                    "code_short": "import {createRoot} from 'react-dom/client'\ncreateRoot(document.getElementById('root')).render(<App/>)",
+                    "notes_ref": "/notes-reactjs/intro/project-setup",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "project-setup",
+                    "tags": [
+                        "root",
+                        "mount"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-what-is-react-026",
+                    "question": "What is React Server Components (one-liner idea)?",
+                    "answer_short": "RSC lets components render on the server with zero client JS for those parts, streaming UI to the client.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/ssr-rsc/overview",
+                    "difficulty": "hard",
+                    "topic": "ssr-rsc",
+                    "subtopic": "rsc-overview",
+                    "tags": [
+                        "rsc",
+                        "server-components"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-what-is-react-027",
+                    "question": "What is hydration?",
+                    "answer_short": "Hydration attaches event handlers to server-rendered markup so the page becomes interactive on the client.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/ssr-rsc/overview",
+                    "difficulty": "medium",
+                    "topic": "ssr-rsc",
+                    "subtopic": "hydration",
+                    "tags": [
+                        "ssr",
+                        "hydration"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-what-is-react-028",
+                    "question": "Name two reasons React became popular.",
+                    "answer_short": "Declarative components and efficient updates (VDOM + reconciliation), plus a rich ecosystem and strong community.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/what-is-react",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "what-is-react",
+                    "tags": [
+                        "history",
+                        "ecosystem"
+                    ],
+                    "related": [
+                        "intro-what-is-react-012",
+                        "intro-what-is-react-007"
+                    ]
+                }
+            ]
+        }
+    ]
+}

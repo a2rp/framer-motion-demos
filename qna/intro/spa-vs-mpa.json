@@ -1,0 +1,528 @@
+{
+    "version": "1.0",
+    "project": "reactjs-notes",
+    "generated_at": "2025-09-20",
+    "topic_id": "intro",
+    "topic_title": "Intro",
+    "total_questions": 30,
+    "sections": [
+        {
+            "id": "spa-vs-mpa",
+            "title": "SPA vs MPA",
+            "slug": "spa-vs-mpa",
+            "questions": [
+                {
+                    "qid": "intro-spa-vs-mpa-001",
+                    "question": "What is a Single-Page Application (SPA)?",
+                    "answer_short": "An app that loads a shell once and updates the view via client-side rendering as the user navigates, without full page reloads.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/spa-vs-mpa",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "spa-vs-mpa",
+                    "tags": [
+                        "SPA",
+                        "CSR",
+                        "routing"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-002",
+                    "question": "What is a Multi-Page Application (MPA)?",
+                    "answer_short": "A site where each navigation loads a new HTML document from the server; rendering is server-driven for every route.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/spa-vs-mpa",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "spa-vs-mpa",
+                    "tags": [
+                        "MPA",
+                        "SSR",
+                        "navigation"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-003",
+                    "question": "Key difference between SPA and MPA in one line?",
+                    "answer_short": "SPA navigations update the view via JS without reloading the page; MPA navigations fetch a new page from the server.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/spa-vs-mpa",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "spa-vs-mpa",
+                    "tags": [
+                        "SPA",
+                        "MPA"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-001",
+                        "intro-spa-vs-mpa-002"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-004",
+                    "question": "Pros of SPA?",
+                    "answer_short": "Snappy in-app navigation, rich client interactivity, stateful UX, fewer full reloads, good for app-like experiences.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/spa-vs-mpa",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "spa-vs-mpa",
+                    "tags": [
+                        "pros",
+                        "SPA"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-005",
+                    "question": "Cons of SPA?",
+                    "answer_short": "Larger initial bundle, JS dependency for content, SEO challenges (without SSR/SSG), more client-side complexity.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/spa-vs-mpa",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "spa-vs-mpa",
+                    "tags": [
+                        "cons",
+                        "SPA",
+                        "SEO"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-010",
+                        "intro-spa-vs-mpa-011"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-006",
+                    "question": "Pros of MPA?",
+                    "answer_short": "Great SEO out of the box, fast first paint for static pages, simpler mental model, stable without heavy JS.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/spa-vs-mpa",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "spa-vs-mpa",
+                    "tags": [
+                        "pros",
+                        "MPA",
+                        "SEO"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-007",
+                    "question": "Cons of MPA?",
+                    "answer_short": "Full page reloads on navigation, duplicated layout across pages, harder to maintain shared client state.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/spa-vs-mpa",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "spa-vs-mpa",
+                    "tags": [
+                        "cons",
+                        "MPA"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-008",
+                    "question": "What is Client-Side Rendering (CSR)?",
+                    "answer_short": "The server sends minimal HTML/JS; the browser runs JS to render and update views.",
+                    "code_short": "function App(){\n  return <main>Rendered on client</main>\n}",
+                    "notes_ref": "/notes-reactjs/intro/spa-vs-mpa",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "rendering",
+                    "tags": [
+                        "CSR",
+                        "SPA"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-001"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-009",
+                    "question": "What is Server-Side Rendering (SSR)?",
+                    "answer_short": "The server returns HTML for the route, then the client hydrates to attach interactivity.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/ssr-rsc/overview",
+                    "difficulty": "medium",
+                    "topic": "ssr-rsc",
+                    "subtopic": "ssr",
+                    "tags": [
+                        "SSR",
+                        "hydration"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-027",
+                        "intro-spa-vs-mpa-028"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-010",
+                    "question": "How do SPAs handle SEO?",
+                    "answer_short": "Pure CSR is weak for SEO; use SSR/SSG or prerendering to deliver crawlable HTML and meta tags.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/spa-vs-mpa",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "seo",
+                    "tags": [
+                        "SEO",
+                        "SSR",
+                        "SSG"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-011",
+                        "intro-spa-vs-mpa-027"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-011",
+                    "question": "SSG vs ISR (in SPA ecosystems)?",
+                    "answer_short": "SSG builds static HTML at build time; ISR periodically revalidates pages to keep static output fresh.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/ssr-rsc/overview",
+                    "difficulty": "medium",
+                    "topic": "ssr-rsc",
+                    "subtopic": "ssg-isr",
+                    "tags": [
+                        "SSG",
+                        "ISR",
+                        "static"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-010"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-012",
+                    "question": "How do SPAs navigate without reloads?",
+                    "answer_short": "They use the History API to push/replace URLs and a client router to render the matching view.",
+                    "code_short": "import {Link, Routes, Route} from 'react-router-dom'\n<Link to=\"/about\">About</Link>",
+                    "notes_ref": "/notes-reactjs/routing/basics",
+                    "difficulty": "easy",
+                    "topic": "routing",
+                    "subtopic": "client-routing",
+                    "tags": [
+                        "routing",
+                        "history-api"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-013"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-013",
+                    "question": "Hash routing vs history routing?",
+                    "answer_short": "Hash uses `#` and doesn’t need server config; history uses clean URLs but needs 404 rewrite to index.html.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/routing/basics",
+                    "difficulty": "easy",
+                    "topic": "routing",
+                    "subtopic": "hash-vs-history",
+                    "tags": [
+                        "routing",
+                        "hash",
+                        "history"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-012",
+                        "intro-spa-vs-mpa-024"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-014",
+                    "question": "When to prefer SPA?",
+                    "answer_short": "Interactive app-like UIs, complex client state, real-time updates, and deep in-app navigation.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/spa-vs-mpa",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "tradeoffs",
+                    "tags": [
+                        "decision",
+                        "SPA"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-015"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-015",
+                    "question": "When to prefer MPA?",
+                    "answer_short": "Content-heavy sites, marketing/SEO-critical pages, news/blogs, or very low JS requirements.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/spa-vs-mpa",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "tradeoffs",
+                    "tags": [
+                        "decision",
+                        "MPA"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-014"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-016",
+                    "question": "Does SPA mean no server rendering?",
+                    "answer_short": "No. Many SPA stacks use SSR/SSG for initial HTML, then hydrate into a SPA for navigation.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/ssr-rsc/overview",
+                    "difficulty": "medium",
+                    "topic": "ssr-rsc",
+                    "subtopic": "spa-with-ssr",
+                    "tags": [
+                        "SSR",
+                        "SPA"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-009",
+                        "intro-spa-vs-mpa-027"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-017",
+                    "question": "Impact on performance metrics (TTFB, LCP, INP)?",
+                    "answer_short": "MPA/SSR improve TTFB/LCP for first view; SPA can excel at INP for subsequent navigations with proper splitting and caching.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/performance/web-vitals",
+                    "difficulty": "hard",
+                    "topic": "performance",
+                    "subtopic": "web-vitals",
+                    "tags": [
+                        "LCP",
+                        "TTFB",
+                        "INP"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-018",
+                    "question": "How do SPAs manage metadata for SEO/social cards?",
+                    "answer_short": "Client-only meta changes aren’t seen by crawlers; use SSR/prerender or server tags per route.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/spa-vs-mpa",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "seo",
+                    "tags": [
+                        "meta",
+                        "OG tags",
+                        "SSR"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-010"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-019",
+                    "question": "How to handle 404s in SPA routing?",
+                    "answer_short": "Add a catch-all route in the client router and configure server/CDN to rewrite unknown paths to index.html.",
+                    "code_short": "<Route path=\"*\" element={<NotFound/>} />",
+                    "notes_ref": "/notes-reactjs/routing/basics",
+                    "difficulty": "medium",
+                    "topic": "routing",
+                    "subtopic": "errors",
+                    "tags": [
+                        "404",
+                        "rewrite"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-013",
+                        "intro-spa-vs-mpa-024"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-020",
+                    "question": "How does code-splitting help SPAs?",
+                    "answer_short": "It reduces initial JS by loading chunks on demand (routes/components), improving first-load performance.",
+                    "code_short": "const Page = React.lazy(()=>import('./Page'))",
+                    "notes_ref": "/notes-reactjs/suspense-code-split/lazy",
+                    "difficulty": "easy",
+                    "topic": "suspense-code-splitting",
+                    "subtopic": "lazy",
+                    "tags": [
+                        "code-splitting",
+                        "lazy"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-021",
+                    "question": "How do SPAs fetch data per route?",
+                    "answer_short": "Use loaders in routers or hooks (e.g., React Router loaders, TanStack Query) and cache results for quick revisits.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/data-fetching-caching/overview",
+                    "difficulty": "medium",
+                    "topic": "data-fetching-caching",
+                    "subtopic": "route-data",
+                    "tags": [
+                        "fetching",
+                        "caching",
+                        "router"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-022",
+                    "question": "Back/forward navigation in SPAs?",
+                    "answer_short": "The router listens to popstate and re-renders the matching route; state restoration is manual unless implemented.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/routing/basics",
+                    "difficulty": "medium",
+                    "topic": "routing",
+                    "subtopic": "history-api",
+                    "tags": [
+                        "history",
+                        "popstate"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-012"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-023",
+                    "question": "Scroll restoration differences?",
+                    "answer_short": "MPAs get browser default scroll restoration; SPAs must implement it or rely on the router’s restoration helpers.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/routing/basics",
+                    "difficulty": "medium",
+                    "topic": "routing",
+                    "subtopic": "scroll-restoration",
+                    "tags": [
+                        "scroll",
+                        "routing"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-024",
+                    "question": "GitHub Pages gotcha for SPAs?",
+                    "answer_short": "History routing 404s on refresh; use hash routing or add a 404.html fallback that rewrites to index.html.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/deployment/github-pages",
+                    "difficulty": "easy",
+                    "topic": "deployment",
+                    "subtopic": "gh-pages",
+                    "tags": [
+                        "GH Pages",
+                        "rewrite"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-013",
+                        "intro-spa-vs-mpa-019"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-025",
+                    "question": "Security considerations: SPA vs MPA?",
+                    "answer_short": "Both must prevent XSS/CSRF. SPAs need careful token handling, CSP, and sanitization since more logic runs client-side.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/security/basics",
+                    "difficulty": "hard",
+                    "topic": "security",
+                    "subtopic": "web-security",
+                    "tags": [
+                        "XSS",
+                        "CSRF",
+                        "CSP"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-026",
+                    "question": "Authentication flows differ?",
+                    "answer_short": "MPA often uses server sessions; SPA commonly uses tokens (cookies with HttpOnly or in-memory) plus protected routes.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/state-management/auth",
+                    "difficulty": "medium",
+                    "topic": "state-management",
+                    "subtopic": "auth",
+                    "tags": [
+                        "auth",
+                        "tokens",
+                        "sessions"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-025"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-027",
+                    "question": "What is hydration and why does it matter to SPA/SSR?",
+                    "answer_short": "Hydration binds JS to server-rendered HTML so the SPA becomes interactive; improves first paint & SEO.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/ssr-rsc/overview",
+                    "difficulty": "medium",
+                    "topic": "ssr-rsc",
+                    "subtopic": "hydration",
+                    "tags": [
+                        "hydration",
+                        "SSR"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-009",
+                        "intro-spa-vs-mpa-016"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-028",
+                    "question": "Streaming SSR in modern stacks?",
+                    "answer_short": "Server streams HTML chunks as they’re ready, improving time-to-first-byte and perceived speed vs classic SSR.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/ssr-rsc/overview",
+                    "difficulty": "hard",
+                    "topic": "ssr-rsc",
+                    "subtopic": "streaming-ssr",
+                    "tags": [
+                        "streaming",
+                        "SSR"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-009"
+                    ]
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-029",
+                    "question": "Offline/PWA angle for SPAs?",
+                    "answer_short": "SPAs pair well with service workers for caching shell/assets and enabling offline or flaky-network resilience.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/pwa/offline-basics",
+                    "difficulty": "medium",
+                    "topic": "pwa",
+                    "subtopic": "offline",
+                    "tags": [
+                        "PWA",
+                        "service-worker"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-spa-vs-mpa-030",
+                    "question": "One-sentence guidance to choose?",
+                    "answer_short": "Pick SPA for app-like interactivity and complex client state; pick MPA/SSR for content-first sites where SEO and first load dominate.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/spa-vs-mpa",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "decision",
+                    "tags": [
+                        "decision",
+                        "SPA",
+                        "MPA"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-014",
+                        "intro-spa-vs-mpa-015"
+                    ]
+                }
+            ]
+        }
+    ]
+}
