@@ -1,0 +1,379 @@
+{
+    "version": "1.0",
+    "project": "reactjs-notes",
+    "generated_at": "2025-09-20",
+    "topic_id": "intro",
+    "topic_title": "Intro",
+    "total_questions": 24,
+    "sections": [
+        {
+            "id": "env-files",
+            "title": ".env Files",
+            "slug": "env-files",
+            "questions": [
+                {
+                    "qid": "intro-env-001",
+                    "question": "How do env vars become available in a Vite React app?",
+                    "answer_short": "Variables prefixed with `VITE_` are exposed on the client via `import.meta.env.*`.",
+                    "code_short": "VITE_API_URL=https://api.example.com\n// usage:\nfetch(import.meta.env.VITE_API_URL + \"/users\")",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "exposure",
+                    "tags": [
+                        "env",
+                        "VITE_",
+                        "import.meta.env"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-002",
+                    "question": "Which env files does Vite support by default?",
+                    "answer_short": "`.env`, `.env.local`, `.env.development(.local)`, `.env.production(.local)`; `.local` files are git-ignored.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "files",
+                    "tags": [
+                        "modes",
+                        "local"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-003",
+                    "question": "How to switch env modes when building or previewing?",
+                    "answer_short": "Use `--mode`. Example: `vite build --mode staging` loads `.env.staging` files.",
+                    "code_short": "vite build --mode staging\nvite preview --mode staging",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "modes",
+                    "tags": [
+                        "mode",
+                        "build",
+                        "preview"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-004",
+                    "question": "Are env vars statically injected or readable at runtime?",
+                    "answer_short": "They are statically injected at build time; changing the server’s env after build won’t affect the client bundle.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "build-time",
+                    "tags": [
+                        "build-time",
+                        "static"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-005",
+                    "question": "How to safely store secrets in a React app?",
+                    "answer_short": "You can’t hide secrets in client builds. Keep secrets on a backend and call it from the client.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/security/basics",
+                    "difficulty": "medium",
+                    "topic": "security",
+                    "subtopic": "secrets",
+                    "tags": [
+                        "secrets",
+                        "backend"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-006",
+                    "question": "How to define a default value if an env var is missing?",
+                    "answer_short": "Use JavaScript fallbacks when reading: `import.meta.env.VITE_X ?? 'default'`.",
+                    "code_short": "const api = import.meta.env.VITE_API_URL ?? \"https://api.dev\";",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "defaults",
+                    "tags": [
+                        "fallback",
+                        "nullish"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-007",
+                    "question": "How to assert required env vars at startup?",
+                    "answer_short": "Create a small validator that throws if `import.meta.env.VITE_*` keys are missing.",
+                    "code_short": "if(!import.meta.env.VITE_API_URL){ throw new Error(\"VITE_API_URL missing\") }",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "validation",
+                    "tags": [
+                        "assert",
+                        "validation"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-008",
+                    "question": "Do env files support comments?",
+                    "answer_short": "Yes, lines starting with `#` are comments; blank lines are ignored.",
+                    "code_short": "# API\nVITE_API_URL=https://api.example.com",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "syntax",
+                    "tags": [
+                        "dotenv",
+                        "syntax"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-009",
+                    "question": "How to reference BASE URL in links or asset paths?",
+                    "answer_short": "Use `import.meta.env.BASE_URL` (set by Vite’s `base` config).",
+                    "code_short": "<a href={`${import.meta.env.BASE_URL}docs`}>Docs</a>",
+                    "notes_ref": "/notes-reactjs/deployment/github-pages",
+                    "difficulty": "easy",
+                    "topic": "deployment",
+                    "subtopic": "base",
+                    "tags": [
+                        "BASE_URL",
+                        "links"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-010",
+                    "question": "Where to keep per-developer overrides?",
+                    "answer_short": "In `.env.local` (and mode variants like `.env.development.local`), which are git-ignored.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "local",
+                    "tags": [
+                        "local",
+                        "gitignore"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-011",
+                    "question": "How to pass non-VITE vars to the client safely?",
+                    "answer_short": "You shouldn’t. Only `VITE_*` vars are exposed intentionally; use a server to proxy or compute values.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/security/basics",
+                    "difficulty": "medium",
+                    "topic": "security",
+                    "subtopic": "exposure",
+                    "tags": [
+                        "exposure",
+                        "proxy"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-012",
+                    "question": "How to switch API endpoints by mode?",
+                    "answer_short": "Define different values in `.env.development` vs `.env.production`, or use `--mode staging` and `.env.staging`.",
+                    "code_short": "VITE_API_URL=https://api.dev\n# in .env.production\nVITE_API_URL=https://api.prod",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "modes",
+                    "tags": [
+                        "mode",
+                        "api"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-013",
+                    "question": "How to inspect env values at runtime in dev?",
+                    "answer_short": "Log `import.meta.env` in the console; don’t ship this in production builds.",
+                    "code_short": "console.log(import.meta.env);",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "debug",
+                    "tags": [
+                        "debug",
+                        "console"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-014",
+                    "question": "What happens if you rename a VITE var after building?",
+                    "answer_short": "The bundle still holds the old value; you must rebuild to pick up changes.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "build-time",
+                    "tags": [
+                        "rebuild",
+                        "cache"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-015",
+                    "question": "How to expose build metadata to the app (e.g., version, commit)?",
+                    "answer_short": "Write them at build time as VITE vars (via CI) and read from `import.meta.env`.",
+                    "code_short": "VITE_APP_VERSION=1.4.2\nVITE_GIT_SHA=abc123",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "metadata",
+                    "tags": [
+                        "version",
+                        "commit",
+                        "CI"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-016",
+                    "question": "How to conditionally enable analytics only in production?",
+                    "answer_short": "Check `import.meta.env.MODE === 'production'` before initializing analytics.",
+                    "code_short": "if(import.meta.env.MODE === 'production'){ initAnalytics(); }",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "mode-check",
+                    "tags": [
+                        "MODE",
+                        "analytics"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-017",
+                    "question": "What’s the difference between MODE and NODE_ENV in Vite?",
+                    "answer_short": "`import.meta.env.MODE` is Vite’s mode. `process.env.NODE_ENV` is not standard in the browser; prefer MODE.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "mode",
+                    "tags": [
+                        "MODE",
+                        "NODE_ENV"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-018",
+                    "question": "How to avoid committing secrets accidentally?",
+                    "answer_short": "Use `.env.local`, add a sample `.env.example` without secrets, and enable pre-commit checks.",
+                    "code_short": ".env.local\n# .env.example committed without secrets",
+                    "notes_ref": "/notes-reactjs/security/basics",
+                    "difficulty": "easy",
+                    "topic": "security",
+                    "subtopic": "hygiene",
+                    "tags": [
+                        "git",
+                        "example"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-019",
+                    "question": "How to consume env in HTML (index.html) with Vite?",
+                    "answer_short": "Use `%` syntax in `index.html` for some vars, or inject via script. Prefer reading in JS when possible.",
+                    "code_short": "<title>%VITE_APP_TITLE%</title>",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "html",
+                    "tags": [
+                        "index.html",
+                        "html-vars"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-020",
+                    "question": "How to configure different public bases per env?",
+                    "answer_short": "Set `base` in `vite.config` conditionally using `defineConfig(({ mode }) => ...)`.",
+                    "code_short": "export default defineConfig(({mode})=>({ base: mode==='production'?'/notes-reactjs/':'/' }))",
+                    "notes_ref": "/notes-reactjs/deployment/github-pages",
+                    "difficulty": "medium",
+                    "topic": "deployment",
+                    "subtopic": "base",
+                    "tags": [
+                        "base",
+                        "mode"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-021",
+                    "question": "How to provide feature flags from env?",
+                    "answer_short": "Create `VITE_FEATURE_*` vars and gate UI paths on them.",
+                    "code_short": "if(import.meta.env.VITE_FEATURE_NEW_UI==='true'){ renderNewUI() }",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "flags",
+                    "tags": [
+                        "feature-flags"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-022",
+                    "question": "How to use env in CSS or styled-components?",
+                    "answer_short": "Pass values from JS to styles via CSS variables or theme providers; envs aren’t read inside CSS directly.",
+                    "code_short": ":root{ --api: /* from JS */ }",
+                    "notes_ref": "/notes-reactjs/styling/styled-components",
+                    "difficulty": "medium",
+                    "topic": "styling",
+                    "subtopic": "env-css",
+                    "tags": [
+                        "css-vars",
+                        "theme"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-023",
+                    "question": "How to mock env vars in tests (Vitest)?",
+                    "answer_short": "Override `import.meta.env` in setup files, or inject via `define` in the test config.",
+                    "code_short": "vi.stubGlobal('import', { meta:{ env:{ VITE_API_URL:'http://test' }}})",
+                    "notes_ref": "/notes-reactjs/testing/overview",
+                    "difficulty": "hard",
+                    "topic": "testing",
+                    "subtopic": "env",
+                    "tags": [
+                        "vitest",
+                        "mock"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-env-024",
+                    "question": "Quick checklist for env hygiene?",
+                    "answer_short": "Prefix with `VITE_`, keep secrets server-side, use `.env.local`, validate on startup, document in `.env.example`.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "checklist",
+                    "tags": [
+                        "checklist",
+                        "hygiene"
+                    ],
+                    "related": []
+                }
+            ]
+        }
+    ]
+}

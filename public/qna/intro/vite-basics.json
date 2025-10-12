@@ -1,0 +1,409 @@
+{
+    "version": "1.0",
+    "project": "reactjs-notes",
+    "generated_at": "2025-09-20",
+    "topic_id": "intro",
+    "topic_title": "Intro",
+    "total_questions": 24,
+    "sections": [
+        {
+            "id": "vite-basics",
+            "title": "Vite Basics",
+            "slug": "vite-basics",
+            "questions": [
+                {
+                    "qid": "intro-vite-basics-001",
+                    "question": "What is Vite in one line?",
+                    "answer_short": "A fast dev server and build tool that uses native ESM for instant startup and Rollup for production builds.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "vite",
+                    "tags": [
+                        "vite",
+                        "esm",
+                        "rollup"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-vite-basics-002",
+                    "question": "How do you create a React app with Vite?",
+                    "answer_short": "Use the official scaffolder to bootstrap a React template.",
+                    "code_short": "npm create vite@latest my-app -- --template react",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "scaffold",
+                    "tags": [
+                        "scaffold",
+                        "template"
+                    ],
+                    "related": [
+                        "intro-project-setup-001"
+                    ]
+                },
+                {
+                    "qid": "intro-vite-basics-003",
+                    "question": "What commands do you run day-to-day?",
+                    "answer_short": "`npm run dev` (serve), `npm run build` (production), `npm run preview` (serve built files).",
+                    "code_short": "scripts:{\n  \"dev\":\"vite\",\n  \"build\":\"vite build\",\n  \"preview\":\"vite preview\"\n}",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "commands",
+                    "tags": [
+                        "dev",
+                        "build",
+                        "preview"
+                    ],
+                    "related": [
+                        "intro-project-setup-005"
+                    ]
+                },
+                {
+                    "qid": "intro-vite-basics-004",
+                    "question": "Why is Vite dev server so fast?",
+                    "answer_short": "It serves source as native ESM and transforms on demand, avoiding full bundling during development.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "esm",
+                    "tags": [
+                        "esm",
+                        "on-demand"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-vite-basics-005",
+                    "question": "Where do static files live and how are they referenced?",
+                    "answer_short": "Put static assets in `public/` and reference via the base URL.",
+                    "code_short": "<img src={`${import.meta.env.BASE_URL}logo.png`} />",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "public",
+                    "tags": [
+                        "public",
+                        "assets"
+                    ],
+                    "related": [
+                        "intro-project-setup-007"
+                    ]
+                },
+                {
+                    "qid": "intro-vite-basics-006",
+                    "question": "How do imported assets from `src` work?",
+                    "answer_short": "They’re processed and hashed by the build; you import and use the URL.",
+                    "code_short": "import logoUrl from \"./assets/logo.svg\";\n<img src={logoUrl} alt=\"\"/>",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "assets",
+                    "tags": [
+                        "hashing",
+                        "imports"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-vite-basics-007",
+                    "question": "How do you set a base path (e.g., for GitHub Pages)?",
+                    "answer_short": "Set `base: \"/<repo>/\"` in `vite.config` so all asset links and imports resolve.",
+                    "code_short": "export default { base: \"/notes-reactjs/\" }",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "base",
+                    "tags": [
+                        "base",
+                        "deploy"
+                    ],
+                    "related": [
+                        "intro-project-setup-008"
+                    ]
+                },
+                {
+                    "qid": "intro-vite-basics-008",
+                    "question": "How do `.env` variables work in Vite?",
+                    "answer_short": "Client-exposed vars must start with `VITE_` and are read via `import.meta.env`.",
+                    "code_short": "VITE_API_URL=https://api.example.com",
+                    "notes_ref": "/notes-reactjs/intro/env-files",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "env",
+                    "tags": [
+                        "env",
+                        "VITE_"
+                    ],
+                    "related": [
+                        "intro-project-setup-010"
+                    ]
+                },
+                {
+                    "qid": "intro-vite-basics-009",
+                    "question": "How to alias `@` to `src`?",
+                    "answer_short": "Configure `resolve.alias` in `vite.config`.",
+                    "code_short": "resolve:{ alias:{ \"@\": fileURLToPath(new URL('./src',import.meta.url)) } }",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "alias",
+                    "tags": [
+                        "alias",
+                        "imports"
+                    ],
+                    "related": [
+                        "intro-project-setup-013"
+                    ]
+                },
+                {
+                    "qid": "intro-vite-basics-010",
+                    "question": "How do you enable React Fast Refresh?",
+                    "answer_short": "Use `@vitejs/plugin-react` which includes Fast Refresh by default.",
+                    "code_short": "import react from '@vitejs/plugin-react'\nexport default { plugins:[react()] }",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "fast-refresh",
+                    "tags": [
+                        "fast-refresh",
+                        "plugin"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-vite-basics-011",
+                    "question": "How to set up a dev proxy for APIs?",
+                    "answer_short": "Use `server.proxy` to forward paths and avoid CORS during development.",
+                    "code_short": "server:{ proxy:{ \"/api\": { target:\"http://localhost:4000\", changeOrigin:true } } }",
+                    "notes_ref": "/notes-reactjs/networking/dev-proxy",
+                    "difficulty": "medium",
+                    "topic": "networking",
+                    "subtopic": "proxy",
+                    "tags": [
+                        "proxy",
+                        "cors"
+                    ],
+                    "related": [
+                        "intro-project-setup-017"
+                    ]
+                },
+                {
+                    "qid": "intro-vite-basics-012",
+                    "question": "What’s the production bundler and why Rollup?",
+                    "answer_short": "Vite uses Rollup for optimized production bundles with advanced tree-shaking and code-splitting.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "rollup",
+                    "tags": [
+                        "rollup",
+                        "bundle"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-vite-basics-013",
+                    "question": "How to add source maps for production builds?",
+                    "answer_short": "Enable `build.sourcemap: true` in the config.",
+                    "code_short": "build:{ sourcemap:true }",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "sourcemap",
+                    "tags": [
+                        "sourcemap"
+                    ],
+                    "related": [
+                        "intro-project-setup-020"
+                    ]
+                },
+                {
+                    "qid": "intro-vite-basics-014",
+                    "question": "How do you lazy-load a React route with Vite?",
+                    "answer_short": "Use `React.lazy` with dynamic imports; Vite splits the chunk automatically.",
+                    "code_short": "const Page = React.lazy(()=>import('./Page'))",
+                    "notes_ref": "/notes-reactjs/suspense-code-splitting/lazy",
+                    "difficulty": "easy",
+                    "topic": "suspense-code-splitting",
+                    "subtopic": "lazy",
+                    "tags": [
+                        "code-splitting",
+                        "lazy"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-vite-basics-015",
+                    "question": "Does Vite support CSS Modules and PostCSS?",
+                    "answer_short": "Yes; CSS Modules work out of the box, and PostCSS config is auto-loaded from `postcss.config.*`.",
+                    "code_short": "import s from './Btn.module.css'\n<button className={s.btn}/> ",
+                    "notes_ref": "/notes-reactjs/styling/overview",
+                    "difficulty": "easy",
+                    "topic": "styling",
+                    "subtopic": "css",
+                    "tags": [
+                        "css-modules",
+                        "postcss"
+                    ],
+                    "related": [
+                        "intro-project-setup-019"
+                    ]
+                },
+                {
+                    "qid": "intro-vite-basics-016",
+                    "question": "How to reference files in Markdown or public paths safely?",
+                    "answer_short": "Prefix links with `import.meta.env.BASE_URL` so they work in subfolder deploys.",
+                    "code_short": "<a href={`${import.meta.env.BASE_URL}docs/guide.html`}>Guide</a>",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "base-links",
+                    "tags": [
+                        "base",
+                        "links"
+                    ],
+                    "related": [
+                        "intro-project-setup-022"
+                    ]
+                },
+                {
+                    "qid": "intro-vite-basics-017",
+                    "question": "How do you handle SVG as React components?",
+                    "answer_short": "Use a plugin (e.g., SVGR) or import as URL; Vite doesn’t convert to components by default.",
+                    "code_short": "import logoUrl from './logo.svg'\n<img src={logoUrl}/>",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "medium",
+                    "topic": "intro",
+                    "subtopic": "svg",
+                    "tags": [
+                        "svg",
+                        "svgr"
+                    ],
+                    "related": [
+                        "intro-project-setup-018"
+                    ]
+                },
+                {
+                    "qid": "intro-vite-basics-018",
+                    "question": "How to change the dev server port and open browser?",
+                    "answer_short": "Configure `server.port` and `server.open`.",
+                    "code_short": "server:{ port:5174, open:true }",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "server",
+                    "tags": [
+                        "server",
+                        "port",
+                        "open"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-vite-basics-019",
+                    "question": "Hot Module Replacement (HMR) in Vite?",
+                    "answer_short": "Enabled by default; updates modules without full refresh for fast feedback.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "hmr",
+                    "tags": [
+                        "hmr",
+                        "dev"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-vite-basics-020",
+                    "question": "How to analyze your production bundle?",
+                    "answer_short": "Use Rollup plugins or community analyzers to inspect chunks and dependencies.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/performance/bundle",
+                    "difficulty": "medium",
+                    "topic": "performance",
+                    "subtopic": "analyze",
+                    "tags": [
+                        "analyze",
+                        "bundle"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-vite-basics-021",
+                    "question": "How to set build target (JS output level)?",
+                    "answer_short": "Use `build.target` (e.g., `es2019`) to control transpilation.",
+                    "code_short": "build:{ target:\"es2019\" }",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "target",
+                    "tags": [
+                        "target",
+                        "compat"
+                    ],
+                    "related": [
+                        "intro-project-setup-020"
+                    ]
+                },
+                {
+                    "qid": "intro-vite-basics-022",
+                    "question": "How to add TypeScript to a Vite React project?",
+                    "answer_short": "Use the TS template or add `tsconfig.json`; Vite has first-class TS support.",
+                    "code_short": "npm create vite@latest my-app -- --template react-ts",
+                    "notes_ref": "/notes-reactjs/typescript/overview",
+                    "difficulty": "easy",
+                    "topic": "typescript",
+                    "subtopic": "setup",
+                    "tags": [
+                        "typescript",
+                        "template"
+                    ],
+                    "related": []
+                },
+                {
+                    "qid": "intro-vite-basics-023",
+                    "question": "How do you serve the built app locally?",
+                    "answer_short": "Run `npm run preview` which serves `dist/` with the same base path.",
+                    "code_short": "npm run build && npm run preview",
+                    "notes_ref": "/notes-reactjs/intro/vite-basics",
+                    "difficulty": "easy",
+                    "topic": "intro",
+                    "subtopic": "preview",
+                    "tags": [
+                        "preview",
+                        "dist"
+                    ],
+                    "related": [
+                        "intro-vite-basics-003"
+                    ]
+                },
+                {
+                    "qid": "intro-vite-basics-024",
+                    "question": "What are common gotchas with subfolder deploys?",
+                    "answer_short": "For history routing, add 404 fallback; prefix asset/links with `BASE_URL`; avoid absolute `/` paths.",
+                    "code_short": "",
+                    "notes_ref": "/notes-reactjs/deployment/github-pages",
+                    "difficulty": "medium",
+                    "topic": "deployment",
+                    "subtopic": "gotchas",
+                    "tags": [
+                        "gh-pages",
+                        "base",
+                        "404"
+                    ],
+                    "related": [
+                        "intro-spa-vs-mpa-024",
+                        "intro-project-setup-009"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,262 @@
+import { Box, CircularProgress } from '@mui/material';
+import { lazy, Suspense } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+
+const Home = lazy(() => import('./pages/home'));
+const NotFound = lazy(() => import('./pages/notFound'));
+
+/* =========================
+   Animations: Page/Route
+   ========================= */
+const CurtainReveal = lazy(() => import('./pages/placeholder'));
+const BookFlip = lazy(() => import('./pages/placeholder'));
+const SlideOverStack = lazy(() => import('./pages/placeholder'));
+const ParallaxPush = lazy(() => import('./pages/placeholder'));
+const CrossfadeMicroScale = lazy(() => import('./pages/placeholder'));
+const DoorSwing = lazy(() => import('./pages/placeholder'));
+const LiquidCorners = lazy(() => import('./pages/placeholder'));
+const HeroTeleport = lazy(() => import('./pages/placeholder'));
+const SplitTransition = lazy(() => import('./pages/placeholder'));
+const BlurDownToSharp = lazy(() => import('./pages/placeholder'));
+
+/* =========================
+   Component Entrances/Layout
+   ========================= */
+const StaggeredCardRise = lazy(() => import('./pages/placeholder'));
+const DropInWithBounce = lazy(() => import('./pages/placeholder'));
+const GrowFromMeasure = lazy(() => import('./pages/placeholder'));
+const PopAndSettle = lazy(() => import('./pages/placeholder'));
+const ElasticAccordion = lazy(() => import('./pages/placeholder'));
+const FlipReflow = lazy(() => import('./pages/placeholder'));
+const GridExplodeToDetail = lazy(() => import('./pages/placeholder'));
+const MasonryShuffle = lazy(() => import('./pages/placeholder'));
+
+/* =========================
+   Gestures / Micro-Interactions
+   ========================= */
+const DragToDismiss = lazy(() => import('./pages/placeholder'));
+const DragSnapCarousel = lazy(() => import('./pages/placeholder'));
+const PullToRefresh = lazy(() => import('./pages/placeholder'));
+const SwipeToArchive = lazy(() => import('./pages/placeholder'));
+const LongPressProgressRing = lazy(() => import('./pages/placeholder'));
+const HoverPeekTilt = lazy(() => import('./pages/placeholder'));
+const MagneticButton = lazy(() => import('./pages/placeholder'));
+const RailSelector = lazy(() => import('./pages/placeholder'));
+
+/* =========================
+   Lists / Filters / Data Changes
+   ========================= */
+const FilterMeltAway = lazy(() => import('./pages/placeholder'));
+const DiffInOut = lazy(() => import('./pages/placeholder'));
+const DragReorderSort = lazy(() => import('./pages/placeholder'));
+const NumberTicker = lazy(() => import('./pages/placeholder'));
+const NewRowHighlight = lazy(() => import('./pages/placeholder'));
+const KpiChipCountTick = lazy(() => import('./pages/placeholder'));
+
+/* =========================
+   Feedback & System Status
+   ========================= */
+const SuccessMorph = lazy(() => import('./pages/placeholder'));
+const ErrorShake = lazy(() => import('./pages/placeholder'));
+const PressRipple = lazy(() => import('./pages/placeholder'));
+const SavePulse = lazy(() => import('./pages/placeholder'));
+const CopyConfirmationFlash = lazy(() => import('./pages/placeholder'));
+const OfflineBannerSlideDown = lazy(() => import('./pages/placeholder'));
+
+/* =========================
+   Modals / Drawers / Overlays
+   ========================= */
+const FrostedGlassModal = lazy(() => import('./pages/placeholder'));
+const BottomSheetRubberBand = lazy(() => import('./pages/placeholder'));
+const ContextMenuMorph = lazy(() => import('./pages/placeholder'));
+const SpotlightOverlay = lazy(() => import('./pages/placeholder'));
+const MultiStepModal = lazy(() => import('./pages/placeholder'));
+
+/* =========================
+   Navigation & Tabs
+   ========================= */
+const UnderlineGlide = lazy(() => import('./pages/placeholder'));
+const BreadcrumbCrumbEntrance = lazy(() => import('./pages/placeholder'));
+const SectionHeaderStickyShrink = lazy(() => import('./pages/placeholder'));
+const SideNavCollapse = lazy(() => import('./pages/placeholder'));
+const CommandPaletteZoomIn = lazy(() => import('./pages/placeholder'));
+
+/* =========================
+   Forms & Inputs
+   ========================= */
+const FieldFocusGlow = lazy(() => import('./pages/placeholder'));
+const InvalidFieldMicroShake = lazy(() => import('./pages/placeholder'));
+const AutocompleteSpringExpand = lazy(() => import('./pages/placeholder'));
+const SubmitMorph = lazy(() => import('./pages/placeholder'));
+const PasswordRevealEyeBounce = lazy(() => import('./pages/placeholder'));
+const StepperProgressBar = lazy(() => import('./pages/placeholder'));
+
+/* =========================
+   Charts & Media
+   ========================= */
+const BarChartGrow = lazy(() => import('./pages/placeholder'));
+const LineChartDrawOn = lazy(() => import('./pages/placeholder'));
+const PieSlicePopOut = lazy(() => import('./pages/placeholder'));
+const SkeletonsToData = lazy(() => import('./pages/placeholder'));
+const MapPinDrop = lazy(() => import('./pages/placeholder'));
+const ImageLightboxZoom = lazy(() => import('./pages/placeholder'));
+
+/* =========================
+   Scroll-Driven & Storytelling
+   ========================= */
+const RevealOnScroll = lazy(() => import('./pages/placeholder'));
+const ReadingProgressBar = lazy(() => import('./pages/placeholder'));
+const ParallaxHeroLayers = lazy(() => import('./pages/placeholder'));
+const ScrollytellingSteps = lazy(() => import('./pages/placeholder'));
+const BackToTopFab = lazy(() => import('./pages/placeholder'));
+
+/* =========================
+   Enterprise / Table
+   ========================= */
+const RowExpandPreview = lazy(() => import('./pages/placeholder'));
+const InlineEditMorph = lazy(() => import('./pages/placeholder'));
+const BulkSelectToolbar = lazy(() => import('./pages/placeholder'));
+const ColumnResizeGhostLine = lazy(() => import('./pages/placeholder'));
+const RowInsertToast = lazy(() => import('./pages/placeholder'));
+const PagedTableTransition = lazy(() => import('./pages/placeholder'));
+
+/* =========================
+   Advanced / Fancy
+   ========================= */
+const SharedAvatarMorph = lazy(() => import('./pages/placeholder'));
+const FabToComposeMorph = lazy(() => import('./pages/placeholder'));
+const GlassCardCondensation = lazy(() => import('./pages/placeholder'));
+const TimeSliceStreaks = lazy(() => import('./pages/placeholder'));
+const ThreeDCardFlip = lazy(() => import('./pages/placeholder'));
+const ThreeDRingCarousel = lazy(() => import('./pages/placeholder'));
+const DrawerFold = lazy(() => import('./pages/placeholder'));
+
+const AppRoutes = () => {
+    return (
+        <>
+            <Suspense
+                fallback={
+                    <Box
+                        sx={{
+                            width: "100vw", height: "100vh",
+                            display: "flex", alignItems: "center", justifyContent: "center"
+                        }}
+                    >
+                        <CircularProgress />
+                    </Box>
+                }
+            >
+                <Routes>
+                    <Route path="/" element={<Navigate to="/home" />} />
+                    <Route path="/home" element={<Home />} />
+
+                    {/* Page / Route */}
+                    <Route path="/curtain-reveal" element={<CurtainReveal />} />
+                    <Route path="/book-flip" element={<BookFlip />} />
+                    <Route path="/slide-over-stack" element={<SlideOverStack />} />
+                    <Route path="/parallax-push" element={<ParallaxPush />} />
+                    <Route path="/crossfade-micro-scale" element={<CrossfadeMicroScale />} />
+                    <Route path="/door-swing" element={<DoorSwing />} />
+                    <Route path="/liquid-corners" element={<LiquidCorners />} />
+                    <Route path="/hero-teleport" element={<HeroTeleport />} />
+                    <Route path="/split-transition" element={<SplitTransition />} />
+                    <Route path="/blur-down-to-sharp" element={<BlurDownToSharp />} />
+
+                    {/* Component Entrances / Layout */}
+                    <Route path="/staggered-card-rise" element={<StaggeredCardRise />} />
+                    <Route path="/drop-in-with-bounce" element={<DropInWithBounce />} />
+                    <Route path="/grow-from-measure" element={<GrowFromMeasure />} />
+                    <Route path="/pop-and-settle" element={<PopAndSettle />} />
+                    <Route path="/elastic-accordion" element={<ElasticAccordion />} />
+                    <Route path="/flip-reflow" element={<FlipReflow />} />
+                    <Route path="/grid-explode-to-detail" element={<GridExplodeToDetail />} />
+                    <Route path="/masonry-shuffle" element={<MasonryShuffle />} />
+
+                    {/* Gestures / Micro-Interactions */}
+                    <Route path="/drag-to-dismiss" element={<DragToDismiss />} />
+                    <Route path="/drag-snap-carousel" element={<DragSnapCarousel />} />
+                    <Route path="/pull-to-refresh" element={<PullToRefresh />} />
+                    <Route path="/swipe-to-archive" element={<SwipeToArchive />} />
+                    <Route path="/long-press-progress-ring" element={<LongPressProgressRing />} />
+                    <Route path="/hover-peek-tilt" element={<HoverPeekTilt />} />
+                    <Route path="/magnetic-button" element={<MagneticButton />} />
+                    <Route path="/rail-selector" element={<RailSelector />} />
+
+                    {/* Lists / Filters / Data Changes */}
+                    <Route path="/filter-melt-away" element={<FilterMeltAway />} />
+                    <Route path="/diff-in-out" element={<DiffInOut />} />
+                    <Route path="/drag-reorder-sort" element={<DragReorderSort />} />
+                    <Route path="/number-ticker" element={<NumberTicker />} />
+                    <Route path="/new-row-highlight" element={<NewRowHighlight />} />
+                    <Route path="/kpi-chip-count-tick" element={<KpiChipCountTick />} />
+
+                    {/* Feedback & System Status */}
+                    <Route path="/success-morph" element={<SuccessMorph />} />
+                    <Route path="/error-shake" element={<ErrorShake />} />
+                    <Route path="/press-ripple" element={<PressRipple />} />
+                    <Route path="/save-pulse" element={<SavePulse />} />
+                    <Route path="/copy-confirmation-flash" element={<CopyConfirmationFlash />} />
+                    <Route path="/offline-banner-slide-down" element={<OfflineBannerSlideDown />} />
+
+                    {/* Modals / Drawers / Overlays */}
+                    <Route path="/frosted-glass-modal" element={<FrostedGlassModal />} />
+                    <Route path="/bottom-sheet-rubber-band" element={<BottomSheetRubberBand />} />
+                    <Route path="/context-menu-morph" element={<ContextMenuMorph />} />
+                    <Route path="/spotlight-overlay" element={<SpotlightOverlay />} />
+                    <Route path="/multi-step-modal" element={<MultiStepModal />} />
+
+                    {/* Navigation & Tabs */}
+                    <Route path="/underline-glide" element={<UnderlineGlide />} />
+                    <Route path="/breadcrumb-crumb-entrance" element={<BreadcrumbCrumbEntrance />} />
+                    <Route path="/section-header-sticky-shrink" element={<SectionHeaderStickyShrink />} />
+                    <Route path="/side-nav-collapse" element={<SideNavCollapse />} />
+                    <Route path="/command-palette-zoom-in" element={<CommandPaletteZoomIn />} />
+
+                    {/* Forms & Inputs */}
+                    <Route path="/field-focus-glow" element={<FieldFocusGlow />} />
+                    <Route path="/invalid-field-micro-shake" element={<InvalidFieldMicroShake />} />
+                    <Route path="/autocomplete-spring-expand" element={<AutocompleteSpringExpand />} />
+                    <Route path="/submit-morph" element={<SubmitMorph />} />
+                    <Route path="/password-reveal-eye-bounce" element={<PasswordRevealEyeBounce />} />
+                    <Route path="/stepper-progress-bar" element={<StepperProgressBar />} />
+
+                    {/* Charts & Media */}
+                    <Route path="/bar-chart-grow" element={<BarChartGrow />} />
+                    <Route path="/line-chart-draw-on" element={<LineChartDrawOn />} />
+                    <Route path="/pie-slice-pop-out" element={<PieSlicePopOut />} />
+                    <Route path="/skeletons-to-data" element={<SkeletonsToData />} />
+                    <Route path="/map-pin-drop" element={<MapPinDrop />} />
+                    <Route path="/image-lightbox-zoom" element={<ImageLightboxZoom />} />
+
+                    {/* Scroll-Driven & Storytelling */}
+                    <Route path="/reveal-on-scroll" element={<RevealOnScroll />} />
+                    <Route path="/reading-progress-bar" element={<ReadingProgressBar />} />
+                    <Route path="/parallax-hero-layers" element={<ParallaxHeroLayers />} />
+                    <Route path="/scrollytelling-steps" element={<ScrollytellingSteps />} />
+                    <Route path="/back-to-top-fab" element={<BackToTopFab />} />
+
+                    {/* Enterprise / Table */}
+                    <Route path="/row-expand-preview" element={<RowExpandPreview />} />
+                    <Route path="/inline-edit-morph" element={<InlineEditMorph />} />
+                    <Route path="/bulk-select-toolbar" element={<BulkSelectToolbar />} />
+                    <Route path="/column-resize-ghost-line" element={<ColumnResizeGhostLine />} />
+                    <Route path="/row-insert-toast" element={<RowInsertToast />} />
+                    <Route path="/paged-table-transition" element={<PagedTableTransition />} />
+
+                    {/* Advanced / Fancy */}
+                    <Route path="/shared-avatar-morph" element={<SharedAvatarMorph />} />
+                    <Route path="/fab-to-compose-morph" element={<FabToComposeMorph />} />
+                    <Route path="/glass-card-condensation" element={<GlassCardCondensation />} />
+                    <Route path="/time-slice-streaks" element={<TimeSliceStreaks />} />
+                    <Route path="/three-d-card-flip" element={<ThreeDCardFlip />} />
+                    <Route path="/three-d-ring-carousel" element={<ThreeDRingCarousel />} />
+                    <Route path="/drawer-fold" element={<DrawerFold />} />
+
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </Suspense>
+        </>
+    );
+};
+
+export default AppRoutes;
