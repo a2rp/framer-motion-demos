@@ -1,6 +1,8 @@
 import { Box, CircularProgress } from '@mui/material';
 import { lazy, Suspense } from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import Page from './components/Page';
+import { AnimatePresence } from 'framer-motion';
 
 const Home = lazy(() => import('./pages/home'));
 const NotFound = lazy(() => import('./pages/notFound'));
@@ -8,16 +10,17 @@ const NotFound = lazy(() => import('./pages/notFound'));
 /* =========================
    Animations: Page/Route
    ========================= */
-const CurtainReveal = lazy(() => import('./pages/placeholder'));
-const BookFlip = lazy(() => import('./pages/placeholder'));
-const SlideOverStack = lazy(() => import('./pages/placeholder'));
-const ParallaxPush = lazy(() => import('./pages/placeholder'));
-const CrossfadeMicroScale = lazy(() => import('./pages/placeholder'));
-const DoorSwing = lazy(() => import('./pages/placeholder'));
-const LiquidCorners = lazy(() => import('./pages/placeholder'));
-const HeroTeleport = lazy(() => import('./pages/placeholder'));
-const SplitTransition = lazy(() => import('./pages/placeholder'));
-const BlurDownToSharp = lazy(() => import('./pages/placeholder'));
+const CurtainReveal = lazy(() => import("./pages/apps/curtainReveal"));
+const BookFlip = lazy(() => import('./pages/apps/bookFlip'));
+const SlideOverStack = lazy(() => import('./pages/apps/slideOverStack'));
+const ParallaxPush = lazy(() => import('./pages/apps/parallaxPush'));
+const CrossfadeMicroScale = lazy(() => import('./pages/apps/crossfadeMicroScale'));
+const DoorSwing = lazy(() => import('./pages/apps/doorSwing'));
+const LiquidCorners = lazy(() => import('./pages/apps/liquidCorners'));
+const HeroTeleport = lazy(() => import('./pages/apps/heroTeleport'));
+const SplitTransition = lazy(() => import('./pages/apps/splitTransition'));
+const BlurDownToSharp = lazy(() => import('./pages/apps/blurDownToSharp'));
+
 
 /* =========================
    Component Entrances/Layout
@@ -132,6 +135,9 @@ const ThreeDRingCarousel = lazy(() => import('./pages/placeholder'));
 const DrawerFold = lazy(() => import('./pages/placeholder'));
 
 const AppRoutes = () => {
+    const location = useLocation();
+    const page = (node) => <Page>{node}</Page>;
+
     return (
         <>
             <Suspense
@@ -146,114 +152,116 @@ const AppRoutes = () => {
                     </Box>
                 }
             >
-                <Routes>
-                    <Route path="/" element={<Navigate to="/home" />} />
-                    <Route path="/home" element={<Home />} />
+                <AnimatePresence initial={false} mode="wait">
+                    <Routes location={location} key={location.pathname}>
+                        <Route path="/" element={<Navigate to="/home" />} />
+                        <Route path="/home" element={<Home />} />
 
-                    {/* Page / Route */}
-                    <Route path="/curtain-reveal" element={<CurtainReveal />} />
-                    <Route path="/book-flip" element={<BookFlip />} />
-                    <Route path="/slide-over-stack" element={<SlideOverStack />} />
-                    <Route path="/parallax-push" element={<ParallaxPush />} />
-                    <Route path="/crossfade-micro-scale" element={<CrossfadeMicroScale />} />
-                    <Route path="/door-swing" element={<DoorSwing />} />
-                    <Route path="/liquid-corners" element={<LiquidCorners />} />
-                    <Route path="/hero-teleport" element={<HeroTeleport />} />
-                    <Route path="/split-transition" element={<SplitTransition />} />
-                    <Route path="/blur-down-to-sharp" element={<BlurDownToSharp />} />
+                        {/* Page / Route */}
+                        <Route path="/curtain-reveal" element={<CurtainReveal />} />
+                        <Route path="/book-flip" element={<BookFlip />} />
+                        <Route path="/slide-over-stack" element={<SlideOverStack />} />
+                        <Route path="/parallax-push" element={<ParallaxPush />} />
+                        <Route path="/crossfade-micro-scale" element={<CrossfadeMicroScale />} />
+                        <Route path="/door-swing" element={<DoorSwing />} />
+                        <Route path="/liquid-corners" element={<LiquidCorners />} />
+                        <Route path="/hero-teleport" element={<HeroTeleport />} />
+                        <Route path="/split-transition" element={<SplitTransition />} />
+                        <Route path="/blur-down-to-sharp" element={<BlurDownToSharp />} />
 
-                    {/* Component Entrances / Layout */}
-                    <Route path="/staggered-card-rise" element={<StaggeredCardRise />} />
-                    <Route path="/drop-in-with-bounce" element={<DropInWithBounce />} />
-                    <Route path="/grow-from-measure" element={<GrowFromMeasure />} />
-                    <Route path="/pop-and-settle" element={<PopAndSettle />} />
-                    <Route path="/elastic-accordion" element={<ElasticAccordion />} />
-                    <Route path="/flip-reflow" element={<FlipReflow />} />
-                    <Route path="/grid-explode-to-detail" element={<GridExplodeToDetail />} />
-                    <Route path="/masonry-shuffle" element={<MasonryShuffle />} />
+                        {/* Component Entrances / Layout */}
+                        <Route path="/staggered-card-rise" element={<StaggeredCardRise />} />
+                        <Route path="/drop-in-with-bounce" element={<DropInWithBounce />} />
+                        <Route path="/grow-from-measure" element={<GrowFromMeasure />} />
+                        <Route path="/pop-and-settle" element={<PopAndSettle />} />
+                        <Route path="/elastic-accordion" element={<ElasticAccordion />} />
+                        <Route path="/flip-reflow" element={<FlipReflow />} />
+                        <Route path="/grid-explode-to-detail" element={<GridExplodeToDetail />} />
+                        <Route path="/masonry-shuffle" element={<MasonryShuffle />} />
 
-                    {/* Gestures / Micro-Interactions */}
-                    <Route path="/drag-to-dismiss" element={<DragToDismiss />} />
-                    <Route path="/drag-snap-carousel" element={<DragSnapCarousel />} />
-                    <Route path="/pull-to-refresh" element={<PullToRefresh />} />
-                    <Route path="/swipe-to-archive" element={<SwipeToArchive />} />
-                    <Route path="/long-press-progress-ring" element={<LongPressProgressRing />} />
-                    <Route path="/hover-peek-tilt" element={<HoverPeekTilt />} />
-                    <Route path="/magnetic-button" element={<MagneticButton />} />
-                    <Route path="/rail-selector" element={<RailSelector />} />
+                        {/* Gestures / Micro-Interactions */}
+                        <Route path="/drag-to-dismiss" element={<DragToDismiss />} />
+                        <Route path="/drag-snap-carousel" element={<DragSnapCarousel />} />
+                        <Route path="/pull-to-refresh" element={<PullToRefresh />} />
+                        <Route path="/swipe-to-archive" element={<SwipeToArchive />} />
+                        <Route path="/long-press-progress-ring" element={<LongPressProgressRing />} />
+                        <Route path="/hover-peek-tilt" element={<HoverPeekTilt />} />
+                        <Route path="/magnetic-button" element={<MagneticButton />} />
+                        <Route path="/rail-selector" element={<RailSelector />} />
 
-                    {/* Lists / Filters / Data Changes */}
-                    <Route path="/filter-melt-away" element={<FilterMeltAway />} />
-                    <Route path="/diff-in-out" element={<DiffInOut />} />
-                    <Route path="/drag-reorder-sort" element={<DragReorderSort />} />
-                    <Route path="/number-ticker" element={<NumberTicker />} />
-                    <Route path="/new-row-highlight" element={<NewRowHighlight />} />
-                    <Route path="/kpi-chip-count-tick" element={<KpiChipCountTick />} />
+                        {/* Lists / Filters / Data Changes */}
+                        <Route path="/filter-melt-away" element={<FilterMeltAway />} />
+                        <Route path="/diff-in-out" element={<DiffInOut />} />
+                        <Route path="/drag-reorder-sort" element={<DragReorderSort />} />
+                        <Route path="/number-ticker" element={<NumberTicker />} />
+                        <Route path="/new-row-highlight" element={<NewRowHighlight />} />
+                        <Route path="/kpi-chip-count-tick" element={<KpiChipCountTick />} />
 
-                    {/* Feedback & System Status */}
-                    <Route path="/success-morph" element={<SuccessMorph />} />
-                    <Route path="/error-shake" element={<ErrorShake />} />
-                    <Route path="/press-ripple" element={<PressRipple />} />
-                    <Route path="/save-pulse" element={<SavePulse />} />
-                    <Route path="/copy-confirmation-flash" element={<CopyConfirmationFlash />} />
-                    <Route path="/offline-banner-slide-down" element={<OfflineBannerSlideDown />} />
+                        {/* Feedback & System Status */}
+                        <Route path="/success-morph" element={<SuccessMorph />} />
+                        <Route path="/error-shake" element={<ErrorShake />} />
+                        <Route path="/press-ripple" element={<PressRipple />} />
+                        <Route path="/save-pulse" element={<SavePulse />} />
+                        <Route path="/copy-confirmation-flash" element={<CopyConfirmationFlash />} />
+                        <Route path="/offline-banner-slide-down" element={<OfflineBannerSlideDown />} />
 
-                    {/* Modals / Drawers / Overlays */}
-                    <Route path="/frosted-glass-modal" element={<FrostedGlassModal />} />
-                    <Route path="/bottom-sheet-rubber-band" element={<BottomSheetRubberBand />} />
-                    <Route path="/context-menu-morph" element={<ContextMenuMorph />} />
-                    <Route path="/spotlight-overlay" element={<SpotlightOverlay />} />
-                    <Route path="/multi-step-modal" element={<MultiStepModal />} />
+                        {/* Modals / Drawers / Overlays */}
+                        <Route path="/frosted-glass-modal" element={<FrostedGlassModal />} />
+                        <Route path="/bottom-sheet-rubber-band" element={<BottomSheetRubberBand />} />
+                        <Route path="/context-menu-morph" element={<ContextMenuMorph />} />
+                        <Route path="/spotlight-overlay" element={<SpotlightOverlay />} />
+                        <Route path="/multi-step-modal" element={<MultiStepModal />} />
 
-                    {/* Navigation & Tabs */}
-                    <Route path="/underline-glide" element={<UnderlineGlide />} />
-                    <Route path="/breadcrumb-crumb-entrance" element={<BreadcrumbCrumbEntrance />} />
-                    <Route path="/section-header-sticky-shrink" element={<SectionHeaderStickyShrink />} />
-                    <Route path="/side-nav-collapse" element={<SideNavCollapse />} />
-                    <Route path="/command-palette-zoom-in" element={<CommandPaletteZoomIn />} />
+                        {/* Navigation & Tabs */}
+                        <Route path="/underline-glide" element={<UnderlineGlide />} />
+                        <Route path="/breadcrumb-crumb-entrance" element={<BreadcrumbCrumbEntrance />} />
+                        <Route path="/section-header-sticky-shrink" element={<SectionHeaderStickyShrink />} />
+                        <Route path="/side-nav-collapse" element={<SideNavCollapse />} />
+                        <Route path="/command-palette-zoom-in" element={<CommandPaletteZoomIn />} />
 
-                    {/* Forms & Inputs */}
-                    <Route path="/field-focus-glow" element={<FieldFocusGlow />} />
-                    <Route path="/invalid-field-micro-shake" element={<InvalidFieldMicroShake />} />
-                    <Route path="/autocomplete-spring-expand" element={<AutocompleteSpringExpand />} />
-                    <Route path="/submit-morph" element={<SubmitMorph />} />
-                    <Route path="/password-reveal-eye-bounce" element={<PasswordRevealEyeBounce />} />
-                    <Route path="/stepper-progress-bar" element={<StepperProgressBar />} />
+                        {/* Forms & Inputs */}
+                        <Route path="/field-focus-glow" element={<FieldFocusGlow />} />
+                        <Route path="/invalid-field-micro-shake" element={<InvalidFieldMicroShake />} />
+                        <Route path="/autocomplete-spring-expand" element={<AutocompleteSpringExpand />} />
+                        <Route path="/submit-morph" element={<SubmitMorph />} />
+                        <Route path="/password-reveal-eye-bounce" element={<PasswordRevealEyeBounce />} />
+                        <Route path="/stepper-progress-bar" element={<StepperProgressBar />} />
 
-                    {/* Charts & Media */}
-                    <Route path="/bar-chart-grow" element={<BarChartGrow />} />
-                    <Route path="/line-chart-draw-on" element={<LineChartDrawOn />} />
-                    <Route path="/pie-slice-pop-out" element={<PieSlicePopOut />} />
-                    <Route path="/skeletons-to-data" element={<SkeletonsToData />} />
-                    <Route path="/map-pin-drop" element={<MapPinDrop />} />
-                    <Route path="/image-lightbox-zoom" element={<ImageLightboxZoom />} />
+                        {/* Charts & Media */}
+                        <Route path="/bar-chart-grow" element={<BarChartGrow />} />
+                        <Route path="/line-chart-draw-on" element={<LineChartDrawOn />} />
+                        <Route path="/pie-slice-pop-out" element={<PieSlicePopOut />} />
+                        <Route path="/skeletons-to-data" element={<SkeletonsToData />} />
+                        <Route path="/map-pin-drop" element={<MapPinDrop />} />
+                        <Route path="/image-lightbox-zoom" element={<ImageLightboxZoom />} />
 
-                    {/* Scroll-Driven & Storytelling */}
-                    <Route path="/reveal-on-scroll" element={<RevealOnScroll />} />
-                    <Route path="/reading-progress-bar" element={<ReadingProgressBar />} />
-                    <Route path="/parallax-hero-layers" element={<ParallaxHeroLayers />} />
-                    <Route path="/scrollytelling-steps" element={<ScrollytellingSteps />} />
-                    <Route path="/back-to-top-fab" element={<BackToTopFab />} />
+                        {/* Scroll-Driven & Storytelling */}
+                        <Route path="/reveal-on-scroll" element={<RevealOnScroll />} />
+                        <Route path="/reading-progress-bar" element={<ReadingProgressBar />} />
+                        <Route path="/parallax-hero-layers" element={<ParallaxHeroLayers />} />
+                        <Route path="/scrollytelling-steps" element={<ScrollytellingSteps />} />
+                        <Route path="/back-to-top-fab" element={<BackToTopFab />} />
 
-                    {/* Enterprise / Table */}
-                    <Route path="/row-expand-preview" element={<RowExpandPreview />} />
-                    <Route path="/inline-edit-morph" element={<InlineEditMorph />} />
-                    <Route path="/bulk-select-toolbar" element={<BulkSelectToolbar />} />
-                    <Route path="/column-resize-ghost-line" element={<ColumnResizeGhostLine />} />
-                    <Route path="/row-insert-toast" element={<RowInsertToast />} />
-                    <Route path="/paged-table-transition" element={<PagedTableTransition />} />
+                        {/* Enterprise / Table */}
+                        <Route path="/row-expand-preview" element={<RowExpandPreview />} />
+                        <Route path="/inline-edit-morph" element={<InlineEditMorph />} />
+                        <Route path="/bulk-select-toolbar" element={<BulkSelectToolbar />} />
+                        <Route path="/column-resize-ghost-line" element={<ColumnResizeGhostLine />} />
+                        <Route path="/row-insert-toast" element={<RowInsertToast />} />
+                        <Route path="/paged-table-transition" element={<PagedTableTransition />} />
 
-                    {/* Advanced / Fancy */}
-                    <Route path="/shared-avatar-morph" element={<SharedAvatarMorph />} />
-                    <Route path="/fab-to-compose-morph" element={<FabToComposeMorph />} />
-                    <Route path="/glass-card-condensation" element={<GlassCardCondensation />} />
-                    <Route path="/time-slice-streaks" element={<TimeSliceStreaks />} />
-                    <Route path="/three-d-card-flip" element={<ThreeDCardFlip />} />
-                    <Route path="/three-d-ring-carousel" element={<ThreeDRingCarousel />} />
-                    <Route path="/drawer-fold" element={<DrawerFold />} />
+                        {/* Advanced / Fancy */}
+                        <Route path="/shared-avatar-morph" element={<SharedAvatarMorph />} />
+                        <Route path="/fab-to-compose-morph" element={<FabToComposeMorph />} />
+                        <Route path="/glass-card-condensation" element={<GlassCardCondensation />} />
+                        <Route path="/time-slice-streaks" element={<TimeSliceStreaks />} />
+                        <Route path="/three-d-card-flip" element={<ThreeDCardFlip />} />
+                        <Route path="/three-d-ring-carousel" element={<ThreeDRingCarousel />} />
+                        <Route path="/drawer-fold" element={<DrawerFold />} />
 
-                    <Route path="*" element={<NotFound />} />
-                </Routes>
+                        <Route path="*" element={<NotFound />} />
+                    </Routes>
+                </AnimatePresence>
             </Suspense>
         </>
     );

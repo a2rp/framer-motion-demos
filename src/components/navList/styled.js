@@ -8,15 +8,17 @@ export const Styled = {
 
         .home,
         a {
-            color: #aaa;
+            color: var(--text-muted);
             text-decoration: none;
             display: flex;
             &:hover {
-                text-decoration: underline;
-                color: #fff;
+                text-decoration: none;
+                color: var(--text);
+                background: var(--surface);
             }
+
             &.active {
-                color: coral;
+                color: var(--primary);
             }
         }
 

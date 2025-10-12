@@ -1,0 +1,204 @@
+/* Theme-aware, crisp transforms, minimal DOM */
+
+.pp-wrapper {
+    display: grid;
+    gap: var(--space-6);
+    padding: var(--space-6);
+    max-width: 980px;
+    margin: 0 auto;
+    color: var(--text);
+}
+
+.pp-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4);
+    justify-content: space-between;
+}
+.pp-heading h1 {
+    font-size: 24px;
+    line-height: 1.2;
+}
+.pp-heading .muted {
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+.pp-controls {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    gap: var(--space-4);
+    align-items: center;
+}
+.pp-controls .spacer {
+    width: 12px;
+}
+.pp-controls .btn {
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    border-radius: var(--radius-md);
+    padding: 8px 14px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+}
+.pp-controls .btn.primary {
+    background: var(--primary);
+    color: var(--primary-contrast);
+    border-color: transparent;
+}
+.pp-controls .btn.ghost {
+    background: var(--surface);
+}
+.pp-controls .btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.pp-controls .dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+.pp-controls .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--border);
+}
+.pp-controls .dot.active {
+    background: var(--primary);
+}
+
+.ctrl {
+    display: grid;
+    gap: 6px;
+    align-items: center;
+}
+.ctrl span {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.ctrl input[type="range"] {
+    width: 160px;
+    accent-color: var(--primary);
+}
+.ctrl em {
+    font-style: normal;
+    color: var(--text-muted);
+    font-size: 12px;
+    padding-left: 6px;
+}
+
+/* Stage with two absolute layers */
+.pp-stage {
+    position: relative;
+    isolation: isolate;
+    min-height: 320px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--card);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+/* Background layer: decorative + parallax drift */
+.pp-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    will-change: transform, opacity, filter;
+}
+
+/* Simple “world” visuals: stripes + dots */
+.bg-stripes {
+    position: absolute;
+    inset: -20% -10% -20% -10%;
+    background: linear-gradient(
+        120deg,
+        hsl(210 90% 56% / 0.1) 0%,
+        transparent 25%,
+        transparent 75%,
+        hsl(210 90% 62% / 0.1) 100%
+    );
+    filter: saturate(1.1);
+}
+.bg-dots {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+            2px 2px at 12% 30%,
+            hsl(210 90% 56% / 0.25),
+            transparent 60%
+        ),
+        radial-gradient(
+            2px 2px at 66% 72%,
+            hsl(210 90% 62% / 0.22),
+            transparent 60%
+        ),
+        radial-gradient(
+            2px 2px at 84% 12%,
+            hsl(210 90% 58% / 0.2),
+            transparent 60%
+        );
+    mix-blend-mode: overlay;
+}
+
+/* Foreground page/card */
+.pp-page {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: grid;
+    place-items: stretch;
+    padding: var(--space-6);
+    will-change: transform, opacity;
+}
+
+.pp-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    height: 100%;
+    overflow: auto;
+}
+.pp-card .cardHead {
+    display: grid;
+    gap: 6px;
+    margin-bottom: var(--space-4);
+}
+.pp-card .kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 11px;
+    color: var(--text-muted);
+}
+.pp-card h2 {
+    font-size: 22px;
+}
+.pp-card .body {
+    margin-bottom: var(--space-4);
+    color: var(--text);
+}
+.pp-card .bullets {
+    margin-left: 18px;
+    display: grid;
+    gap: 6px;
+    color: var(--text);
+}
+
+/* Responsive */
+@media (width < 560px) {
+    .pp-wrapper {
+        padding: var(--space-4);
+    }
+    .pp-page {
+        padding: var(--space-4);
+    }
+    .pp-card {
+        padding: var(--space-4);
+    }
+}

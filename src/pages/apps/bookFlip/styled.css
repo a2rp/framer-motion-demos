@@ -1,0 +1,136 @@
+/* Scoped styles for BookFlip demo; uses global CSS variables */
+.bookFlip {
+    display: grid;
+    gap: var(--space-6);
+    padding: var(--space-6);
+    max-width: 980px;
+    margin: 0 auto;
+    color: var(--text);
+}
+
+.bookFlip .head h1 {
+    font-size: 24px;
+    line-height: 1.2;
+}
+.bookFlip .head p {
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+.bookFlip .controls {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.bookFlip .btn {
+    justify-self: start;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    border-radius: var(--radius-md);
+    padding: 8px 14px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+}
+.bookFlip .btn.primary {
+    justify-self: end;
+    background: var(--primary);
+    color: var(--primary-contrast);
+    border-color: transparent;
+}
+.bookFlip .btn:disabled,
+.bookFlip .ghost:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.bookFlip .dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+.bookFlip .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--border);
+}
+.bookFlip .dot.active {
+    background: var(--primary);
+}
+
+/* 3D scene providing perspective */
+.bookFlip .scene {
+    perspective: 1200px;
+    perspective-origin: 50% 40%;
+    position: relative;
+    min-height: 280px;
+}
+
+/* The flipping page/card */
+.bookFlip .page {
+    position: relative;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-6);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+/* Subtle inner structure */
+.bookFlip .pageHead {
+    display: grid;
+    gap: 6px;
+    margin-bottom: var(--space-4);
+}
+.bookFlip .kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 11px;
+    color: var(--text-muted);
+}
+.bookFlip .page h2 {
+    font-size: 22px;
+}
+
+.bookFlip .body {
+    margin-bottom: var(--space-4);
+    color: var(--text);
+}
+
+.bookFlip .bullets {
+    margin-left: 18px;
+    display: grid;
+    gap: 6px;
+    color: var(--text);
+}
+
+.bookFlip .pageFoot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-6);
+}
+
+.bookFlip .ghost {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (width < 560px) {
+    .bookFlip {
+        padding: var(--space-4);
+    }
+    .bookFlip .page {
+        padding: var(--space-4);
+    }
+}
