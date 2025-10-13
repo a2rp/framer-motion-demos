@@ -103,12 +103,13 @@ const StepperProgressBar = lazy(() => import('./pages/apps/formsAndInputs/steppe
 /* =========================
    Charts & Media
    ========================= */
-const BarChartGrow = lazy(() => import('./pages/placeholder'));
-const LineChartDrawOn = lazy(() => import('./pages/placeholder'));
-const PieSlicePopOut = lazy(() => import('./pages/placeholder'));
-const SkeletonsToData = lazy(() => import('./pages/placeholder'));
-const MapPinDrop = lazy(() => import('./pages/placeholder'));
-const ImageLightboxZoom = lazy(() => import('./pages/placeholder'));
+const BarChartGrow = lazy(() => import('./pages/apps/chartsAndMedia/barChartGrow'));
+const LineChartDrawOn = lazy(() => import('./pages/apps/chartsAndMedia/lineChartDrawOn'));
+const PieSlicePopOut = lazy(() => import('./pages/apps/chartsAndMedia/pieSlicePopOut'));
+const SkeletonsToData = lazy(() => import('./pages/apps/chartsAndMedia/skeletonsToData'));
+const MapPinDrop = lazy(() => import('./pages/apps/chartsAndMedia/mapPinDrop'));
+const ImageLightboxZoom = lazy(() => import('./pages/apps/chartsAndMedia/imageLightboxZoom'));
+
 
 /* =========================
    Scroll-Driven & Storytelling
