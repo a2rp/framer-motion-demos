@@ -82,8 +82,9 @@ const MultiStepModal = lazy(() => import('./pages/apps/modalsDrawersOverlays/mul
 /* =========================
    Navigation & Tabs
    ========================= */
-const UnderlineGlide = lazy(() => import('./pages/placeholder'));
-const BreadcrumbCrumbEntrance = lazy(() => import('./pages/placeholder'));
+const UnderlineGlide = lazy(() => import('./pages/apps/navigationAndTabs/underlineGlide'));
+const BreadcrumbCrumbEntrance = lazy(() => import('./pages/apps/navigationAndTabs/breadcrumbCrumbEntrance'));
+
 const SectionHeaderStickyShrink = lazy(() => import('./pages/placeholder'));
 const SideNavCollapse = lazy(() => import('./pages/placeholder'));
 const CommandPaletteZoomIn = lazy(() => import('./pages/placeholder'));
