@@ -33,6 +33,8 @@
     --pong-ball: #ffd166;
     --pong-paddle: #06d6a0;
     --pong-paddle-border: #118ab2;
+
+    --site-header-h: 60px;
 }
 
 /* Optional: auto dark-mode via system preference */

@@ -84,10 +84,10 @@ const MultiStepModal = lazy(() => import('./pages/apps/modalsDrawersOverlays/mul
    ========================= */
 const UnderlineGlide = lazy(() => import('./pages/apps/navigationAndTabs/underlineGlide'));
 const BreadcrumbCrumbEntrance = lazy(() => import('./pages/apps/navigationAndTabs/breadcrumbCrumbEntrance'));
+const SectionHeaderStickyShrink = lazy(() => import('./pages/apps/navigationAndTabs/sectionHeaderStickyShrink'));
+const SideNavCollapse = lazy(() => import('./pages/apps/navigationAndTabs/SideNavCollapse'));
+const CommandPaletteZoomIn = lazy(() => import('./pages/apps/navigationAndTabs/commandPaletteZoomIn'));
 
-const SectionHeaderStickyShrink = lazy(() => import('./pages/placeholder'));
-const SideNavCollapse = lazy(() => import('./pages/placeholder'));
-const CommandPaletteZoomIn = lazy(() => import('./pages/placeholder'));
 
 /* =========================
    Forms & Inputs
