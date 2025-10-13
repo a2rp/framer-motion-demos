@@ -10,42 +10,43 @@ const NotFound = lazy(() => import('./pages/notFound'));
 /* =========================
    Animations: Page/Route
    ========================= */
-const CurtainReveal = lazy(() => import("./pages/apps/curtainReveal"));
-const BookFlip = lazy(() => import('./pages/apps/bookFlip'));
-const SlideOverStack = lazy(() => import('./pages/apps/slideOverStack'));
-const ParallaxPush = lazy(() => import('./pages/apps/parallaxPush'));
-const CrossfadeMicroScale = lazy(() => import('./pages/apps/crossfadeMicroScale'));
-const DoorSwing = lazy(() => import('./pages/apps/doorSwing'));
-const LiquidCorners = lazy(() => import('./pages/apps/liquidCorners'));
-const HeroTeleport = lazy(() => import('./pages/apps/heroTeleport'));
-const SplitTransition = lazy(() => import('./pages/apps/splitTransition'));
-const BlurDownToSharp = lazy(() => import('./pages/apps/blurDownToSharp'));
+const CurtainReveal = lazy(() => import("./pages/apps/animations/curtainReveal"));
+const BookFlip = lazy(() => import('./pages/apps/animations/bookFlip'));
+const SlideOverStack = lazy(() => import('./pages/apps/animations/slideOverStack'));
+const ParallaxPush = lazy(() => import('./pages/apps/animations/parallaxPush'));
+const CrossfadeMicroScale = lazy(() => import('./pages/apps/animations/crossfadeMicroScale'));
+const DoorSwing = lazy(() => import('./pages/apps/animations/doorSwing'));
+const LiquidCorners = lazy(() => import('./pages/apps/animations/liquidCorners'));
+const HeroTeleport = lazy(() => import('./pages/apps/animations/heroTeleport'));
+const SplitTransition = lazy(() => import('./pages/apps/animations/splitTransition'));
+const BlurDownToSharp = lazy(() => import('./pages/apps/animations/blurDownToSharp'));
 
 
 /* =========================
    Component Entrances/Layout
    ========================= */
-const StaggeredCardRise = lazy(() => import('./pages/apps/staggeredCardRise'));
-const DropInWithBounce = lazy(() => import('./pages/apps/dropInWithBounce'));
-const GrowFromMeasure = lazy(() => import('./pages/apps/growFromMeasure'));
-const PopAndSettle = lazy(() => import('./pages/apps/popAndSettle'));
-const ElasticAccordion = lazy(() => import('./pages/apps/elasticAccordion'));
-const FlipReflow = lazy(() => import('./pages/apps/flipReflow'));
-const GridExplodeToDetail = lazy(() => import('./pages/apps/gridExplodeToDetail'));
-const MasonryShuffle = lazy(() => import('./pages/apps/masonryShuffle'));
+const StaggeredCardRise = lazy(() => import('./pages/apps/componentEntrance/staggeredCardRise'));
+const DropInWithBounce = lazy(() => import('./pages/apps/componentEntrance/dropInWithBounce'));
+const GrowFromMeasure = lazy(() => import('./pages/apps/componentEntrance/growFromMeasure'));
+const PopAndSettle = lazy(() => import('./pages/apps/componentEntrance/popAndSettle'));
+const ElasticAccordion = lazy(() => import('./pages/apps/componentEntrance/elasticAccordion'));
+const FlipReflow = lazy(() => import('./pages/apps/componentEntrance/flipReflow'));
+const GridExplodeToDetail = lazy(() => import('./pages/apps/componentEntrance/gridExplodeToDetail'));
+const MasonryShuffle = lazy(() => import('./pages/apps/componentEntrance/masonryShuffle'));
 
 
 /* =========================
    Gestures / Micro-Interactions
    ========================= */
-const DragToDismiss = lazy(() => import('./pages/placeholder'));
-const DragSnapCarousel = lazy(() => import('./pages/placeholder'));
-const PullToRefresh = lazy(() => import('./pages/placeholder'));
-const SwipeToArchive = lazy(() => import('./pages/placeholder'));
-const LongPressProgressRing = lazy(() => import('./pages/placeholder'));
-const HoverPeekTilt = lazy(() => import('./pages/placeholder'));
-const MagneticButton = lazy(() => import('./pages/placeholder'));
-const RailSelector = lazy(() => import('./pages/placeholder'));
+const DragToDismiss = lazy(() => import('./pages/apps/gestures/dragToDismiss'));
+const DragSnapCarousel = lazy(() => import('./pages/apps/gestures/dragSnapCarousel'));
+const PullToRefresh = lazy(() => import('./pages/apps/gestures/pullToRefresh'));
+const SwipeToArchive = lazy(() => import('./pages/apps/gestures/swipeToArchive'));
+const LongPressProgressRing = lazy(() => import('./pages/apps/gestures/longPressProgressRing'));
+const HoverPeekTilt = lazy(() => import('./pages/apps/gestures/hoverPeekTilt'));
+const MagneticButton = lazy(() => import('./pages/apps/gestures/magneticButton'));
+const RailSelector = lazy(() => import('./pages/apps/gestures/railSelector'));
+
 
 /* =========================
    Lists / Filters / Data Changes
