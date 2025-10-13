@@ -1,4 +1,4 @@
-import{d as t,r as n,j as e}from"./index-DjyFUv7b.js";import{m as j}from"./pages-CvVyMsYv.js";import{M as w,m}from"./proxy-YdAB8i_T.js";const i={Wrapper:t.div`
+import{d as t,r as n,j as e}from"./index-Cu2CtuUC.js";import{m as j}from"./pages-CvVyMsYv.js";import{M as w,m}from"./proxy-C66yDUOO.js";const i={Wrapper:t.div`
         display: grid;
         gap: var(--space-6);
         padding: var(--space-6);
