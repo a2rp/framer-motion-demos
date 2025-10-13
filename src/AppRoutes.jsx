@@ -72,11 +72,12 @@ const OfflineBannerSlideDown = lazy(() => import('./pages/apps/feedbackAndSystem
 /* =========================
    Modals / Drawers / Overlays
    ========================= */
-const FrostedGlassModal = lazy(() => import('./pages/placeholder'));
-const BottomSheetRubberBand = lazy(() => import('./pages/placeholder'));
-const ContextMenuMorph = lazy(() => import('./pages/placeholder'));
-const SpotlightOverlay = lazy(() => import('./pages/placeholder'));
-const MultiStepModal = lazy(() => import('./pages/placeholder'));
+const FrostedGlassModal = lazy(() => import('./pages/apps/modalsDrawersOverlays/frostedGlassModal'));
+const BottomSheetRubberBand = lazy(() => import('./pages/apps/modalsDrawersOverlays/bottomSheetRubberBand'));
+const ContextMenuMorph = lazy(() => import('./pages/apps/modalsDrawersOverlays/contextMenuMorph'));
+const SpotlightOverlay = lazy(() => import('./pages/apps/modalsDrawersOverlays/spotlightOverlay'));
+const MultiStepModal = lazy(() => import('./pages/apps/modalsDrawersOverlays/multiStepModal'));
+
 
 /* =========================
    Navigation & Tabs
