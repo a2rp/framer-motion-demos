@@ -51,12 +51,12 @@ const RailSelector = lazy(() => import('./pages/apps/gestures/railSelector'));
 /* =========================
    Lists / Filters / Data Changes
    ========================= */
-const FilterMeltAway = lazy(() => import('./pages/placeholder'));
-const DiffInOut = lazy(() => import('./pages/placeholder'));
-const DragReorderSort = lazy(() => import('./pages/placeholder'));
-const NumberTicker = lazy(() => import('./pages/placeholder'));
-const NewRowHighlight = lazy(() => import('./pages/placeholder'));
-const KpiChipCountTick = lazy(() => import('./pages/placeholder'));
+const FilterMeltAway = lazy(() => import('./pages/apps/listsFiltersDataChanges/filterMeltAway'));
+const DiffInOut = lazy(() => import('./pages/apps/listsFiltersDataChanges/diffInOut'));
+const DragReorderSort = lazy(() => import('./pages/apps/listsFiltersDataChanges/dragReorderSort'));
+const NumberTicker = lazy(() => import('./pages/apps/listsFiltersDataChanges/numberTicker'));
+const NewRowHighlight = lazy(() => import('./pages/apps/listsFiltersDataChanges/newRowHighlight'));
+const KpiChipCountTick = lazy(() => import('./pages/apps/listsFiltersDataChanges/kpiChipCountTick'));
 
 /* =========================
    Feedback & System Status
