@@ -25,14 +25,15 @@ const BlurDownToSharp = lazy(() => import('./pages/apps/blurDownToSharp'));
 /* =========================
    Component Entrances/Layout
    ========================= */
-const StaggeredCardRise = lazy(() => import('./pages/placeholder'));
-const DropInWithBounce = lazy(() => import('./pages/placeholder'));
-const GrowFromMeasure = lazy(() => import('./pages/placeholder'));
-const PopAndSettle = lazy(() => import('./pages/placeholder'));
-const ElasticAccordion = lazy(() => import('./pages/placeholder'));
-const FlipReflow = lazy(() => import('./pages/placeholder'));
-const GridExplodeToDetail = lazy(() => import('./pages/placeholder'));
-const MasonryShuffle = lazy(() => import('./pages/placeholder'));
+const StaggeredCardRise = lazy(() => import('./pages/apps/staggeredCardRise'));
+const DropInWithBounce = lazy(() => import('./pages/apps/dropInWithBounce'));
+const GrowFromMeasure = lazy(() => import('./pages/apps/growFromMeasure'));
+const PopAndSettle = lazy(() => import('./pages/apps/popAndSettle'));
+const ElasticAccordion = lazy(() => import('./pages/apps/elasticAccordion'));
+const FlipReflow = lazy(() => import('./pages/apps/flipReflow'));
+const GridExplodeToDetail = lazy(() => import('./pages/apps/gridExplodeToDetail'));
+const MasonryShuffle = lazy(() => import('./pages/apps/masonryShuffle'));
+
 
 /* =========================
    Gestures / Micro-Interactions
