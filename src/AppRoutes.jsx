@@ -61,12 +61,13 @@ const KpiChipCountTick = lazy(() => import('./pages/apps/listsFiltersDataChanges
 /* =========================
    Feedback & System Status
    ========================= */
-const SuccessMorph = lazy(() => import('./pages/placeholder'));
-const ErrorShake = lazy(() => import('./pages/placeholder'));
-const PressRipple = lazy(() => import('./pages/placeholder'));
-const SavePulse = lazy(() => import('./pages/placeholder'));
-const CopyConfirmationFlash = lazy(() => import('./pages/placeholder'));
-const OfflineBannerSlideDown = lazy(() => import('./pages/placeholder'));
+const SuccessMorph = lazy(() => import('./pages/apps/feedbackAndSystemStatuss/successMorph'));
+const ErrorShake = lazy(() => import('./pages/apps/feedbackAndSystemStatuss/errorShake'));
+const PressRipple = lazy(() => import('./pages/apps/feedbackAndSystemStatuss/pressRipple'));
+const SavePulse = lazy(() => import('./pages/apps/feedbackAndSystemStatuss/savePulse'));
+const CopyConfirmationFlash = lazy(() => import('./pages/apps/feedbackAndSystemStatuss/copyConfirmationFlash'));
+const OfflineBannerSlideDown = lazy(() => import('./pages/apps/feedbackAndSystemStatuss/offlineBannerSlideDown'));
+
 
 /* =========================
    Modals / Drawers / Overlays
