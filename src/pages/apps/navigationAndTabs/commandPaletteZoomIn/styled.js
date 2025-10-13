@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Wrapper = styled.div`
     display: grid;
@@ -15,7 +16,6 @@ const Header = styled.header`
     align-items: center;
     justify-content: space-between;
     gap: var(--space-4);
-
     .heading h1 {
         font-size: 24px;
         line-height: 1.2;
@@ -35,7 +35,6 @@ const Header = styled.header`
         background: var(--surface);
         color: var(--text);
     }
-
     .openBtn {
         height: 36px;
         padding: 0 14px;
@@ -72,21 +71,31 @@ const Stage = styled.section`
 `;
 
 /* ---------- Modal ---------- */
-const Backdrop = styled.div.attrs({ className: "cp-backdrop" })`
+const Backdrop = styled(motion.div).attrs({ className: "cp-backdrop" })`
     position: fixed;
     inset: 0;
-    z-index: 60;
+    z-index: 1000;
     background: hsl(220 14% 10% / 0.35);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
 `;
 
-const Dialog = styled.div.attrs({ className: "cp-dialog" })`
+const Dialog = styled(motion.div).attrs({ className: "cp-dialog" })`
     position: fixed;
     inset: 0;
-    z-index: 70;
+    z-index: 1010;
     display: grid;
     place-items: start center;
-    padding-top: 10vh; /* headroom for zoom-in */
+    padding-top: 10vh;
+
+    .cp-card {
+        width: min(720px, calc(100vw - 32px));
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        background: var(--card);
+        box-shadow: 0 30px 80px hsl(220 14% 5% / 0.45), var(--shadow-md);
+        overflow: hidden;
+    }
 
     .cp-search {
         display: grid;
@@ -121,26 +130,12 @@ const Dialog = styled.div.attrs({ className: "cp-dialog" })`
         color: var(--text-muted);
     }
 
-    /* Card shell */
-    & {
-        max-height: 100dvh;
-    }
-    & > * {
-        width: min(720px, calc(100vw - 32px));
-        border: 1px solid var(--border);
-        border-radius: var(--radius-lg);
-        background: var(--card);
-        box-shadow: 0 30px 80px hsl(220 14% 5% / 0.45), var(--shadow-md);
-        overflow: hidden;
-    }
-
     .cp-results {
         max-height: min(56vh, 520px);
         overflow: auto;
-        scroll-behavior: smooth;
         padding: 6px 6px 10px;
+        scroll-behavior: smooth;
     }
-
     .group {
         padding-top: 10px;
     }
@@ -150,16 +145,11 @@ const Dialog = styled.div.attrs({ className: "cp-dialog" })`
         z-index: 1;
         font-size: 12px;
         color: var(--text-muted);
-        background: linear-gradient(
-            180deg,
-            var(--card),
-            color-mix(in oklab, var(--card) 80%, transparent)
-        );
+        background: linear-gradient(180deg, var(--card), rgba(0, 0, 0, 0));
         padding: 6px 10px;
         border-bottom: 1px dashed var(--border);
         backdrop-filter: blur(2px);
     }
-
     .items {
         list-style: none;
         margin: 0;
@@ -192,15 +182,14 @@ const Dialog = styled.div.attrs({ className: "cp-dialog" })`
         border-radius: var(--radius-md);
         background: linear-gradient(
                 0deg,
-                hsl(210 90% 56% / 0.12),
-                hsl(210 90% 56% / 0.06)
+                hsl(210 90% 56% / 0.1),
+                hsl(210 90% 56% / 0.05)
             ),
-            color-mix(in oklab, var(--surface) 90%, transparent);
+            var(--surface);
         border: 1px solid hsl(210 90% 56% / 0.35);
         box-shadow: 0 8px 24px hsl(0 0% 0% / 0.18);
         z-index: 0;
     }
-
     .item .meta {
         position: relative;
         z-index: 1;
@@ -236,8 +225,31 @@ const Dialog = styled.div.attrs({ className: "cp-dialog" })`
         padding: 18px 16px 28px;
     }
 
+    .cp-foot {
+        border-top: 1px solid var(--border);
+        background: var(--card);
+        padding: 8px 12px;
+    }
+    .cp-foot .row {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        color: var(--text-muted);
+        font-size: 12px;
+    }
+
+    mark {
+        background: hsl(51 100% 50% / 0.2);
+        color: inherit;
+        padding: 0 2px;
+        border-radius: 3px;
+    }
+
     @media (width < 560px) {
         padding-top: 6vh;
+        .cp-results {
+            max-height: 56vh;
+        }
     }
 `;
 

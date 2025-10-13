@@ -92,12 +92,13 @@ const CommandPaletteZoomIn = lazy(() => import('./pages/apps/navigationAndTabs/c
 /* =========================
    Forms & Inputs
    ========================= */
-const FieldFocusGlow = lazy(() => import('./pages/placeholder'));
-const InvalidFieldMicroShake = lazy(() => import('./pages/placeholder'));
-const AutocompleteSpringExpand = lazy(() => import('./pages/placeholder'));
-const SubmitMorph = lazy(() => import('./pages/placeholder'));
-const PasswordRevealEyeBounce = lazy(() => import('./pages/placeholder'));
-const StepperProgressBar = lazy(() => import('./pages/placeholder'));
+const FieldFocusGlow = lazy(() => import('./pages/apps/formsAndInputs/fieldFocusGlow'));
+const InvalidFieldMicroShake = lazy(() => import('./pages/apps/formsAndInputs/invalidFieldMicroShake'));
+const AutocompleteSpringExpand = lazy(() => import('./pages/apps/formsAndInputs/autocompleteSpringExpand'));
+const SubmitMorph = lazy(() => import('./pages/apps/formsAndInputs/submitMorph'));
+const PasswordRevealEyeBounce = lazy(() => import('./pages/apps/formsAndInputs/passwordRevealEyeBounce'));
+const StepperProgressBar = lazy(() => import('./pages/apps/formsAndInputs/stepperProgressBar'));
+
 
 /* =========================
    Charts & Media
