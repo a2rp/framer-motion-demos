@@ -135,13 +135,14 @@ const PagedTableTransition = lazy(() => import('./pages/apps/enterpriseTable/pag
 /* =========================
    Advanced / Fancy
    ========================= */
-const SharedAvatarMorph = lazy(() => import('./pages/placeholder'));
-const FabToComposeMorph = lazy(() => import('./pages/placeholder'));
-const GlassCardCondensation = lazy(() => import('./pages/placeholder'));
-const TimeSliceStreaks = lazy(() => import('./pages/placeholder'));
-const ThreeDCardFlip = lazy(() => import('./pages/placeholder'));
-const ThreeDRingCarousel = lazy(() => import('./pages/placeholder'));
-const DrawerFold = lazy(() => import('./pages/placeholder'));
+const SharedAvatarMorph = lazy(() => import('./pages/apps/advancedFancy/SharedAvatarMorph'));
+const FabToComposeMorph = lazy(() => import('./pages/apps/advancedFancy/fabToComposeMorph'));
+const GlassCardCondensation = lazy(() => import('./pages/apps/advancedFancy/glassCardCondensation'));
+const TimeSliceStreaks = lazy(() => import('./pages/apps/advancedFancy/timeSliceStreaks'));
+const ThreeDCardFlip = lazy(() => import('./pages/apps/advancedFancy/threeDCardFlip'));
+const ThreeDRingCarousel = lazy(() => import('./pages/apps/advancedFancy/threeDRingCarousel'));
+const DrawerFold = lazy(() => import('./pages/apps/advancedFancy/drawerFold'));
+
 
 const AppRoutes = () => {
     const location = useLocation();
