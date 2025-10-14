@@ -124,12 +124,13 @@ const BackToTopFab = lazy(() => import('./pages/apps/scrollDrivenAndStorytelling
 /* =========================
    Enterprise / Table
    ========================= */
-const RowExpandPreview = lazy(() => import('./pages/placeholder'));
-const InlineEditMorph = lazy(() => import('./pages/placeholder'));
-const BulkSelectToolbar = lazy(() => import('./pages/placeholder'));
-const ColumnResizeGhostLine = lazy(() => import('./pages/placeholder'));
-const RowInsertToast = lazy(() => import('./pages/placeholder'));
-const PagedTableTransition = lazy(() => import('./pages/placeholder'));
+const RowExpandPreview = lazy(() => import('./pages/apps/enterpriseTable/rowExpandPreview'));
+const InlineEditMorph = lazy(() => import('./pages/apps/enterpriseTable/inlineEditMorph'));
+const BulkSelectToolbar = lazy(() => import('./pages/apps/enterpriseTable/bulkSelectToolbar'));
+const ColumnResizeGhostLine = lazy(() => import('./pages/apps/enterpriseTable/columnResizeGhostLine'));
+const RowInsertToast = lazy(() => import('./pages/apps/enterpriseTable/rowInsertToast'));
+const PagedTableTransition = lazy(() => import('./pages/apps/enterpriseTable/pagedTableTransition'));
+
 
 /* =========================
    Advanced / Fancy
