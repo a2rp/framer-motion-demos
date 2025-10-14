@@ -114,11 +114,12 @@ const ImageLightboxZoom = lazy(() => import('./pages/apps/chartsAndMedia/imageLi
 /* =========================
    Scroll-Driven & Storytelling
    ========================= */
-const RevealOnScroll = lazy(() => import('./pages/placeholder'));
-const ReadingProgressBar = lazy(() => import('./pages/placeholder'));
-const ParallaxHeroLayers = lazy(() => import('./pages/placeholder'));
-const ScrollytellingSteps = lazy(() => import('./pages/placeholder'));
-const BackToTopFab = lazy(() => import('./pages/placeholder'));
+const RevealOnScroll = lazy(() => import('./pages/apps/scrollDrivenAndStorytelling/revealOnScroll'));
+const ReadingProgressBar = lazy(() => import('./pages/apps/scrollDrivenAndStorytelling/readingProgressBar'));
+const ParallaxHeroLayers = lazy(() => import('./pages/apps/scrollDrivenAndStorytelling/parallaxHeroLayers'));
+const ScrollytellingSteps = lazy(() => import('./pages/apps/scrollDrivenAndStorytelling/scrollytellingSteps'));
+const BackToTopFab = lazy(() => import('./pages/apps/scrollDrivenAndStorytelling/backToTopFab'));
+
 
 /* =========================
    Enterprise / Table

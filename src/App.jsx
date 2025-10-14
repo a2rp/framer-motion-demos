@@ -93,7 +93,7 @@ const App = () => {
                 </Styled.ContentWrapper>
             </Styled.Main>
 
-            <ScrollToTop />
+            {/* <ScrollToTop /> */}
             <ToastContainer position="bottom-center" autoClose={4000} newestOnTop />
         </Styled.Wrapper>
     )
