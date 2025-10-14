@@ -186,9 +186,9 @@ export default function ColumnResizeGhostLine() {
                                 </select>
                             </label>
                         </div>
-                        <button className="btn ghost" onClick={resetWidths} title="Reset widths">
+                        {/* <button className="btn ghost" onClick={resetWidths} title="Reset widths">
                             <IconReset /><span>Reset</span>
-                        </button>
+                        </button> */}
                         <button className="btn primary" onClick={openSettings} title="Settings">
                             <IconSettings /><span>Settings</span>
                         </button>
