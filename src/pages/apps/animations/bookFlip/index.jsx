@@ -10,7 +10,7 @@ const PAGES = [
     },
     {
         id: "p2", kicker: "When to use", title: "Story screens",
-        body: `Use for onboarding/story or gallery pages. Keep copy short—motion draws attention.`,
+        body: `Use for onboarding/story or gallery pages. Keep copy short-motion draws attention.`,
         bullets: ["Short copy", "Respect reduced motion (but we override here)", "Avoid nested 3D"],
     },
     {

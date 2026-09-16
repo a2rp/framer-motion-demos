@@ -2,7 +2,7 @@
 
 A route-wise gallery of **unique, production-oriented animation patterns** built with **Framer Motion + React (Vite)** and
 themed with **styled-components**.  
-Focus: page transitions, gestures, lists, tables, overlays, charts, scroll, and enterprise UI touches—each demo isolated per route.
+Focus: page transitions, gestures, lists, tables, overlays, charts, scroll, and enterprise UI touches-each demo isolated per route.
 
 **Live:** https://a2rp.github.io/framer-motion-demos/  
 **Code:** https://github.com/a2rp/framer-motion-demos
@@ -12,7 +12,7 @@ Focus: page transitions, gestures, lists, tables, overlays, charts, scroll, and 
 ## About this repo & background
 
 I often need repeatable motion patterns in real projects (dashboards, ERPs, portals).  
-This repo collects those patterns—kept small, focused, and copy-friendly.
+This repo collects those patterns-kept small, focused, and copy-friendly.
 
 -   **Page transitions:** curtain reveal, book-flip, slide-over stack, hero teleport, split transition, blur-to-sharp
 -   **Entrances & layout:** staggered card rise, drop-in bounce, FLIP reflow, grid → detail, masonry shuffle

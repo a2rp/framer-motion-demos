@@ -159,7 +159,7 @@ export default function DiffInOut() {
                         <h1>Diff-in / Diff-out</h1>
                         <p className="muted">
                             Animate list changes via <code>AnimatePresence</code> and <code>layout</code>.
-                            Filter, search, sort, add, remove, and update—everything stays silky.
+                            Filter, search, sort, add, remove, and update-everything stays silky.
                         </p>
                     </div>
 

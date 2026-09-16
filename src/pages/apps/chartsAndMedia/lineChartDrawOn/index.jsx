@@ -135,7 +135,7 @@ export default function LineChartDrawOn() {
             <Styled.Wrapper>
                 <Styled.Header>
                     <div className="heading">
-                        <h1>Line Chart — Draw On</h1>
+                        <h1>Line Chart - Draw On</h1>
                         <p className="muted">Path reveals with stroke-dash, grid fades in, points stagger, and a crosshair tracks your cursor.</p>
                     </div>
 

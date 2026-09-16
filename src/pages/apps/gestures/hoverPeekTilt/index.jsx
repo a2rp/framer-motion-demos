@@ -160,7 +160,7 @@ function TiltCard({
                 onKeyDown={onKeyDown}
                 role="button"
                 tabIndex={0}
-                aria-label={`${item.title} — ${item.tag}`}
+                aria-label={`${item.title} - ${item.tag}`}
             >
                 {/* Background (moves least) */}
                 <motion.div className="bgLayer" style={{ x: bgX, y: bgY }} aria-hidden>

@@ -6,7 +6,7 @@ import { Styled } from "./styled";
 const TEMPLATES = [
     {
         key: "ps1", title: "Pop & Settle",
-        body: "A quick entrance that pops slightly above 1x scale, then settles—clean emphasis without chaos.",
+        body: "A quick entrance that pops slightly above 1x scale, then settles-clean emphasis without chaos.",
         bullets: ["Scale: 0.92 → 1.06 → 1.00", "Micro y-nudge", "Fast, tasteful timing"]
     },
     {

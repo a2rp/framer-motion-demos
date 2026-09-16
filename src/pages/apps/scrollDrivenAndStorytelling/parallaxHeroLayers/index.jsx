@@ -166,7 +166,7 @@ export default function ParallaxHeroLayers() {
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.05, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                         >
-                            Foreground glides, background drifts — silky, GPU-friendly, and accessible.
+                            Foreground glides, background drifts - silky, GPU-friendly, and accessible.
                         </motion.p>
 
                         <motion.div
@@ -192,7 +192,7 @@ export default function ParallaxHeroLayers() {
                         {[
                             ["Crisp & Performant", "Only transforms & opacity, spring-tuned to avoid layout thrash."],
                             ["Reduced Motion-friendly", "Respects OS preference; content still shines without motion."],
-                            ["Composable", "Layers are plain divs — swap colors, shapes, or add images."],
+                            ["Composable", "Layers are plain divs - swap colors, shapes, or add images."],
                             ["Tiny API Surface", "Just useScroll + useTransform + a couple of springs."],
                             ["No Jank", "GPU-friendly, no filters in the scroll path."],
                             ["Accessible", "Readable contrast, large hit targets, semantic HTML."],

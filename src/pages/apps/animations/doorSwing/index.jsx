@@ -24,7 +24,7 @@ const TEMPLATES = [
         key: "ds3",
         title: "Implementation",
         body:
-            "We use AnimatePresence with mode='wait' so exit finishes before enter—no flicker. " +
+            "We use AnimatePresence with mode='wait' so exit finishes before enter-no flicker. " +
             "Hinge is controlled by transform-origin.",
         bullets: ["mode='wait' for clean swaps", "Only transforms/opacity", "Backface hidden"],
     },

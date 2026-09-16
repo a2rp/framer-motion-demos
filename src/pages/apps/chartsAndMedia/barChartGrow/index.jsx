@@ -130,7 +130,7 @@ export default function BarChartGrow() {
                     animate={{ opacity: 1, y: 0, transition: { duration: 0.35 } }}
                 >
                     <div className="heading">
-                        <h1>Bar Chart — Grow from Baseline</h1>
+                        <h1>Bar Chart - Grow from Baseline</h1>
                         <p className="muted">
                             Bars rise from the baseline with subtle spring timing. Hover to inspect values.
                         </p>

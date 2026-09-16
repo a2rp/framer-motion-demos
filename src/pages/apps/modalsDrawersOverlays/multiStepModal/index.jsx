@@ -26,7 +26,7 @@ const TEMPLATES = [
     {
         key: "s3",
         title: "Preferences",
-        body: "We’ll tune the experience to your preferences—nothing creepy.",
+        body: "We’ll tune the experience to your preferences-nothing creepy.",
         fields: [
             { key: "theme", label: "Theme", placeholder: "System / Light / Dark" },
             { key: "updates", label: "Updates cadence", placeholder: "Weekly / Monthly" },
@@ -186,7 +186,7 @@ export default function MultiStepModal() {
                 </Styled.Header>
 
                 <Styled.Placeholder>
-                    <p>This page demonstrates a self-made modal—no external dialog libs.</p>
+                    <p>This page demonstrates a self-made modal-no external dialog libs.</p>
                     <ul>
                         <li>At least five steps (auto-padded).</li>
                         <li>Framer Motion on backdrop, panel, progress, and step transitions.</li>
@@ -245,9 +245,9 @@ export default function MultiStepModal() {
                                         <div className="review">
                                             <ul>
                                                 {Object.entries(form).length ? (
-                                                    Object.entries(form).map(([k, v]) => <li key={k}><b>{k}:</b> {v || "—"}</li>)
+                                                    Object.entries(form).map(([k, v]) => <li key={k}><b>{k}:</b> {v || "-"}</li>)
                                                 ) : (
-                                                    <li>No data yet—previous steps were optional.</li>
+                                                    <li>No data yet-previous steps were optional.</li>
                                                 )}
                                             </ul>
                                         </div>
@@ -271,7 +271,7 @@ export default function MultiStepModal() {
                                     role="status"
                                     aria-live="polite"
                                 >
-                                    <span className="tick">✓</span> Saved — closing…
+                                    <span className="tick">✓</span> Saved - closing…
                                 </motion.div>
                             )}
                         </AnimatePresence>
@@ -298,7 +298,7 @@ export default function MultiStepModal() {
                                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                                 aria-live="polite"
                             >
-                                <span className="tick">✓</span> Saved — closing…
+                                <span className="tick">✓</span> Saved - closing…
                             </motion.div>
                         )}
                     </AnimatePresence>

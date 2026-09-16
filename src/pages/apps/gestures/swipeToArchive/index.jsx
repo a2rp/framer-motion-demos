@@ -108,7 +108,7 @@ export default function SwipeToArchive() {
         push({ item: entry.item, action: "undelete", from: "deleted", to: entry.from });
     };
 
-    // PURGE (permanent) — called only after confirm
+    // PURGE (permanent) - called only after confirm
     const purgeById = (id) => {
         const idx = deleted.findIndex((e) => e.item.id === id);
         if (idx === -1) return;

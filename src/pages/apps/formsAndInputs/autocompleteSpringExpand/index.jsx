@@ -149,7 +149,7 @@ export default function AutocompleteSpringExpand() {
             <Styled.Wrapper>
                 <Styled.Header>
                     <div className="heading">
-                        <h1>Autocomplete — Spring Expand</h1>
+                        <h1>Autocomplete - Spring Expand</h1>
                         <p className="muted">
                             Type to search. Panel expands with a spring, results stagger in, and the active option uses a shared layout highlight.
                         </p>

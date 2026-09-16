@@ -9,10 +9,10 @@ const TEMPLATES = [
         title: "Overview",
         body:
             "A slide-over transition where the incoming page nudges the previous page into the background " +
-            "with a subtle scale and lateral offset—great for multi-step flows and detail screens.",
+            "with a subtle scale and lateral offset-great for multi-step flows and detail screens.",
         bullets: [
             "Incoming slides on X; previous becomes a stacked card",
-            "Scale & offset are tiny—keeps it classy, not carnival",
+            "Scale & offset are tiny-keeps it classy, not carnival",
             "Works great with forms, wizards, and detail side-panels",
         ],
     },

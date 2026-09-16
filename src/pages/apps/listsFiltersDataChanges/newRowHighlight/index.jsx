@@ -2,7 +2,7 @@ import { useMemo, useRef, useState, useEffect } from "react";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { Styled } from "./styled";
 
-// ——— tiny helpers
+// --- tiny helpers
 const uid = (() => { let i = 0; return () => `nr-${++i}`; })();
 const rand = (a, b) => Math.floor(Math.random() * (b - a + 1)) + a;
 const names = ["Riya", "Kabir", "Aanya", "Imran", "Meera", "Dev", "Zoya", "Vivaan", "Ishaan", "Tara"];

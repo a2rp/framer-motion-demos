@@ -97,7 +97,7 @@ export default function BreadcrumbCrumbEntrance() {
             <Styled.Wrapper>
                 <Styled.Header>
                     <div className="heading">
-                        <h1>Breadcrumb — Crumb-by-Crumb Entrance</h1>
+                        <h1>Breadcrumb - Crumb-by-Crumb Entrance</h1>
                         <p className="muted">Each crumb slides in with a gentle stagger. Active underline glides via shared layout.</p>
                     </div>
 

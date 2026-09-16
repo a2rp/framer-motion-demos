@@ -29,7 +29,7 @@ const TEMPLATES = [
         title: "Implementation",
         body:
             "Two layers: a decorative background and a card-like foreground. " +
-            "Animate both on enter; you usually don't need an exit—keep it snappy.",
+            "Animate both on enter; you usually don't need an exit-keep it snappy.",
         bullets: ["Variants per direction", "Separate transitions", "Pointer-events off on the BG layer"],
     },
 ];

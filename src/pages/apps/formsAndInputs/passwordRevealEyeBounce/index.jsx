@@ -147,7 +147,7 @@ export default function PasswordRevealEyeBounce() {
             <Styled.Wrapper>
                 <Styled.Header>
                     <div className="heading">
-                        <h1>Password — Eye Toggle + Bounce</h1>
+                        <h1>Password - Eye Toggle + Bounce</h1>
                         <p className="muted">
                             Animated reveal/hide with a bouncy eye icon, live strength meter, and realtime validations.
                         </p>

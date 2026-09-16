@@ -199,7 +199,7 @@ const ModalOverlay = styled.div`
         cursor: pointer;
     }
 
-    /* ===== FORM INPUTS — NEW POLISHED STYLES ===== */
+    /* ===== FORM INPUTS - NEW POLISHED STYLES ===== */
     .mBody .form {
         display: grid;
         gap: 14px;

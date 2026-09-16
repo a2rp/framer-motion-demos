@@ -164,7 +164,7 @@ export const Styled = {
     /* Minimal, self-made modal */
     // Using the same component for both backdrop and card
     // so we keep the code tidy and theme-consistent.
-    // It’s not a full focus-trap—kept intentionally simple.
+    // It’s not a full focus-trap-kept intentionally simple.
 };
 
 export const ModalStyles = styled.div``; /* (reserved if you want to split later) */

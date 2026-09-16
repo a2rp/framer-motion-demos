@@ -188,7 +188,7 @@ export default function PieSlicePopOut() {
                             <motion.g initial={false} className="centerLabel">
                                 <text x={CX} y={CY - 6} className="title">
                                     {selected
-                                        ? slices.find((x) => x.id === selected)?.label || "—"
+                                        ? slices.find((x) => x.id === selected)?.label || "-"
                                         : "Total"}
                                 </text>
                                 <text x={CX} y={CY + 20} className="value">

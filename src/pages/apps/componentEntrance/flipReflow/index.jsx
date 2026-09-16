@@ -98,7 +98,7 @@ export default function FlipReflow() {
                         <h1>FLIP Reflow</h1>
                         <p className="muted">
                             Smooth position swaps on list reorder/resize using <code>layout</code>.
-                            No manual keyframes—Framer computes transforms between states.
+                            No manual keyframes-Framer computes transforms between states.
                         </p>
                     </div>
 

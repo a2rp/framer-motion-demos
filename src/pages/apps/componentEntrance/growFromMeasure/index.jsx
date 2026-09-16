@@ -17,7 +17,7 @@ const TEMPLATES = [
         key: "gm2",
         title: "When to use",
         body:
-            "Anytime content can change size—user-generated text, filters, validation blocks—" +
+            "Anytime content can change size-user-generated text, filters, validation blocks-" +
             "and you want a smooth expand/collapse.",
         bullets: ["Forms & validation", "Filter panels", "Doc sections"],
     },

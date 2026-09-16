@@ -8,7 +8,7 @@ const uid = (() => { let i = 0; return () => `slide-${++i}`; })();
 function makeSlides(min = 5) {
     const base = [
         { title: "Depth & Snap", body: "Drag with momentum; release to snap to the closest slide." },
-        { title: "Touch Native", body: "Works great with touch—low dragElastic, no layout thrash." },
+        { title: "Touch Native", body: "Works great with touch-low dragElastic, no layout thrash." },
         { title: "Keyboard Too", body: "Use ← → to move. Dots + buttons are accessible controls." },
         { title: "GPU Friendly", body: "Only transforms/opacity. Smooth across devices." },
     ];

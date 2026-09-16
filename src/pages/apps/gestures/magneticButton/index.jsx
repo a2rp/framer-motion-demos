@@ -60,7 +60,7 @@ export default function MagneticButtonUltra() {
             <Styled.Wrapper data-mode={mode.toLowerCase()}>
                 <Styled.Header>
                     <div className="heading">
-                        <h1>Magnetic Button — Ultra</h1>
+                        <h1>Magnetic Button - Ultra</h1>
                         <p className="muted">
                             Aurora + spotlight + orbiting sparkles. Proper 3D tilt, parallax ghosts, and a neon charge ring.
                         </p>
@@ -139,7 +139,7 @@ function UltraMagneticButton({ label, radius, strength, tiltDeg, intensity, redu
     const mvHalo = useMotionValue(0);
     const mvPressed = useMotionValue(0);
 
-    // Springs — tuned for premium snap
+    // Springs - tuned for premium snap
     const x = useSpring(mvX, { stiffness: 360, damping: 30, mass: 0.8 });
     const y = useSpring(mvY, { stiffness: 360, damping: 30, mass: 0.8 });
     const rX = useSpring(mvRX, { stiffness: 260, damping: 26 });

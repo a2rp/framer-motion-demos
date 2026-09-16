@@ -68,7 +68,7 @@ const Stage = styled.section`
         box-shadow: 0 0 0 3px hsl(8 80% 55% / 0.18);
     }
 
-    /* Eye button — vertically centered without transforms */
+    /* Eye button - vertically centered without transforms */
     .eyeBtn {
         position: absolute;
         right: 6px;

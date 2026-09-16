@@ -111,7 +111,7 @@ export default function RailSelector() {
                         <h1>Rail Selector</h1>
                         <p className="muted">
                             Drag, click, or use keys. Thumb glides with velocity-aware snapping, ticks, tooltip,
-                            ripple, and full ARIA—all theme-aware.
+                            ripple, and full ARIA-all theme-aware.
                         </p>
                     </div>
 

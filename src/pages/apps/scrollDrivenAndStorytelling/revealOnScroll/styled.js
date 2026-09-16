@@ -252,7 +252,7 @@ const SectionStyles = styled(Section)`
 // export alias to keep API tidy
 export { SectionStyles as Section };
 
-/* Modal overlay — as requested */
+/* Modal overlay - as requested */
 export const ModalOverlay = styled.div`
     position: fixed;
     inset: 0;

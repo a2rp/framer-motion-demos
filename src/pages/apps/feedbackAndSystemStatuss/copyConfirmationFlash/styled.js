@@ -91,7 +91,7 @@ const Stage = styled.section`
         }
     }
 
-    /* Pulse ring (success) — sits behind content, expands out */
+    /* Pulse ring (success) - sits behind content, expands out */
     .pulse {
         position: absolute;
         inset: -4px; /* a little larger than the button */

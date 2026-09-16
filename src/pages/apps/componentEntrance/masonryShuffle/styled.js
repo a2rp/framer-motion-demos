@@ -28,7 +28,7 @@ const Header = styled.header`
         margin-top: 6px;
     }
 
-    /* Controls row — perfectly aligned */
+    /* Controls row - perfectly aligned */
     .controls {
         display: flex;
         align-items: center; /* ← centers everything on the baseline */

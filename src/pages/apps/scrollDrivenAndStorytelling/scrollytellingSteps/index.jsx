@@ -46,7 +46,7 @@ const STEPS = [
         title: "Land the message",
         body:
             "End with a clear call-to-action. We’ll open a small modal where folks can subscribe " +
-            "to the full PDF—fully accessible, with validation and a password eye toggle.",
+            "to the full PDF-fully accessible, with validation and a password eye toggle.",
         hue: 330,
     },
 ];

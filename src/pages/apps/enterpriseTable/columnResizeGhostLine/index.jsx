@@ -171,7 +171,7 @@ export default function ColumnResizeGhostLine() {
             <Styled.Wrapper>
                 <Styled.Header>
                     <div className="left">
-                        <h1>Column Resize — Ghost Line</h1>
+                        <h1>Column Resize - Ghost Line</h1>
                         <p className="muted">
                             Drag handles to resize. Ghost line follows the pointer. Widths persist locally. Keyboard: ←/→ (Shift for ×5).
                         </p>

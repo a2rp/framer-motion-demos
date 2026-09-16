@@ -134,7 +134,7 @@ export default function InvalidFieldMicroShake() {
 
     const invalid = (k) => !!errors[k] && (touched[k] || submitCount > 0);
 
-    // ✅ shake controls per field — will run every time active flips to true
+    // ✅ shake controls per field - will run every time active flips to true
     const shakeName = useShakeTrigger(invalid("name"));
     const shakeEmail = useShakeTrigger(invalid("email"));
     const shakePwd = useShakeTrigger(invalid("password"));
@@ -299,7 +299,7 @@ export default function InvalidFieldMicroShake() {
                                                 ? "Weak"
                                                 : score === 1
                                                     ? "Very weak"
-                                                    : "—"}
+                                                    : "-"}
                                     <button
                                         type="button"
                                         className="link"

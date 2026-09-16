@@ -121,16 +121,16 @@ const NavListCore = () => {
 
                 {/* Page / Route */}
                 <h3 className="title" title="Page / Route Transitions">Page / Route Transitions</h3>
-                <><NavLink to="/curtain-reveal" title="Curtain reveal — clipPath slides open">Curtain Reveal</NavLink></>
-                <><NavLink to="/book-flip" title="Book-flip — perspective rotateY enter/exit">Book-flip</NavLink></>
-                <><NavLink to="/slide-over-stack" title="Slide-over stack — new page pushes old with scale">Slide-over Stack</NavLink></>
-                <><NavLink to="/parallax-push" title="Parallax push — fg slides, bg drifts slower">Parallax Push</NavLink></>
+                <><NavLink to="/curtain-reveal" title="Curtain reveal - clipPath slides open">Curtain Reveal</NavLink></>
+                <><NavLink to="/book-flip" title="Book-flip - perspective rotateY enter/exit">Book-flip</NavLink></>
+                <><NavLink to="/slide-over-stack" title="Slide-over stack - new page pushes old with scale">Slide-over Stack</NavLink></>
+                <><NavLink to="/parallax-push" title="Parallax push - fg slides, bg drifts slower">Parallax Push</NavLink></>
                 <><NavLink to="/crossfade-micro-scale" title="Crossfade + micro-scale 0.98→1 settle">Crossfade + Micro-scale</NavLink></>
-                <><NavLink to="/door-swing" title="Door swing — rotateY from left/right hinge">Door Swing</NavLink></>
-                <><NavLink to="/liquid-corners" title="Liquid corners — border-radius morph">Liquid Corners</NavLink></>
-                <><NavLink to="/hero-teleport" title="Hero teleport — shared layoutId between routes">Hero Teleport</NavLink></>
-                <><NavLink to="/split-transition" title="Split transition — halves exit/enter opposite">Split Transition</NavLink></>
-                <><NavLink to="/blur-down-to-sharp" title="Blur-down to sharp — filter blur animates out">Blur-down to Sharp</NavLink></>
+                <><NavLink to="/door-swing" title="Door swing - rotateY from left/right hinge">Door Swing</NavLink></>
+                <><NavLink to="/liquid-corners" title="Liquid corners - border-radius morph">Liquid Corners</NavLink></>
+                <><NavLink to="/hero-teleport" title="Hero teleport - shared layoutId between routes">Hero Teleport</NavLink></>
+                <><NavLink to="/split-transition" title="Split transition - halves exit/enter opposite">Split Transition</NavLink></>
+                <><NavLink to="/blur-down-to-sharp" title="Blur-down to sharp - filter blur animates out">Blur-down to Sharp</NavLink></>
 
                 {/* Component Entrances / Layout */}
                 <h3 className="title" title="Component Entrances & Layout">Component Entrances & Layout</h3>
@@ -231,7 +231,7 @@ const NavListCore = () => {
                 <><NavLink to="/time-slice-streaks" title="Time-slice streaks via clipPath wedges">Time-slice Streaks</NavLink></>
                 <><NavLink to="/three-d-card-flip" title="3D card flip on hover (rotateY + perspective)">3D Card Flip</NavLink></>
                 <><NavLink to="/three-d-ring-carousel" title="3D ring carousel (rotateY items around center)">3D Ring Carousel</NavLink></>
-                <><NavLink to="/drawer-fold" title="Drawer fold — rotateX from top edge">Drawer Fold</NavLink></>
+                <><NavLink to="/drawer-fold" title="Drawer fold - rotateX from top edge">Drawer Fold</NavLink></>
             </div>
 
             {/* Hide nodes flagged by filter */}

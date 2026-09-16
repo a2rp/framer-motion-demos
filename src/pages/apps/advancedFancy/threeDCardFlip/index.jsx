@@ -53,7 +53,7 @@ const CARDS = [
         title: "Photon Prime",
         subtitle: "Plan: Enterprise",
         body:
-            "For teams who ship faster than light—with governance that actually helps.",
+            "For teams who ship faster than light-with governance that actually helps.",
         stats: [
             { k: "Projects", v: "120" },
             { k: "Teams", v: "24" },
@@ -68,7 +68,7 @@ const CARDS = [
             "Great for learning and tinkering. No credit card. No dark patterns.",
         stats: [
             { k: "Projects", v: "2" },
-            { k: "Teams", v: "—" },
+            { k: "Teams", v: "-" },
             { k: "Quota", v: "2 GB" },
         ],
     },

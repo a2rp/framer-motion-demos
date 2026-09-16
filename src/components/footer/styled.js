@@ -21,6 +21,16 @@ const Wrapper = styled.div`
 `;
 
 const Col = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1rem;
+
+    > div {
+        flex-basis: 100%;
+        color: var(--text);
+        font-weight: 700;
+    }
+
     a {
         color: var(--text);
         text-decoration: none;
@@ -35,6 +45,7 @@ const Col = styled.div`
 
         img {
             width: 18px;
+            vertical-align: middle;
         }
     }
 `;

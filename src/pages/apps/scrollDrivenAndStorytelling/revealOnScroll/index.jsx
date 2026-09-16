@@ -216,7 +216,7 @@ export default function RevealOnScroll() {
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: 0.08, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
                             >
-                                Parallax hero, staggered sections, and a clean CTA modal — all theme-aware and buttery.
+                                Parallax hero, staggered sections, and a clean CTA modal - all theme-aware and buttery.
                             </motion.p>
 
                             <motion.div
@@ -249,7 +249,7 @@ export default function RevealOnScroll() {
                             ["Short timelines", "Sub-600ms curves tuned for snappiness."],
                             ["Accessible", "Reduced motion respected in real apps."],
                             ["Theme-aware", "Dark/light tokens for every surface."],
-                            ["Parallax lite", "Tiny offsets — no wobble, just depth."],
+                            ["Parallax lite", "Tiny offsets - no wobble, just depth."],
                             ["Modals done right", "Blurred overlay, centered, keyboard-friendly."],
                         ].map(([t, d], i) => (
                             <motion.article
@@ -280,7 +280,7 @@ export default function RevealOnScroll() {
                             “Motion is seasoning. Overdo it and you ruin the dish; use it wisely and
                             everything tastes better.”
                         </p>
-                        <footer>— A friendly senior engineer</footer>
+                        <footer>- A friendly senior engineer</footer>
                     </motion.blockquote>
                 </Styled.Section>
 

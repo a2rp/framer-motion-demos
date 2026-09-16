@@ -58,7 +58,7 @@ export default function BottomSheetRubberBand() {
             <Styled.Wrapper>
                 <Styled.Header>
                     <div className="heading">
-                        <h1>Bottom Sheet — Rubber-Band</h1>
+                        <h1>Bottom Sheet - Rubber-Band</h1>
                         <p className="muted">
                             Drag down to dismiss. Overscroll stretches elastically, then snaps.
                         </p>

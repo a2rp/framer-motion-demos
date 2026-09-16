@@ -340,10 +340,10 @@ export default function StepperProgressBar() {
                                     <fieldset className="review">
                                         <legend>Review</legend>
                                         <ul className="summary">
-                                            <li><b>Name:</b> {data.name || "—"}</li>
-                                            <li><b>Email:</b> {data.email || "—"}</li>
-                                            <li><b>Role:</b> {data.role || "—"}</li>
-                                            <li><b>Website:</b> {data.website || "—"}</li>
+                                            <li><b>Name:</b> {data.name || "-"}</li>
+                                            <li><b>Email:</b> {data.email || "-"}</li>
+                                            <li><b>Role:</b> {data.role || "-"}</li>
+                                            <li><b>Website:</b> {data.website || "-"}</li>
                                             <li><b>Theme:</b> {data.theme}</li>
                                             <li><b>Newsletter:</b> {data.newsletter ? "Yes" : "No"}</li>
                                         </ul>

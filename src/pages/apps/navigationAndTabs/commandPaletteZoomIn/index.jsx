@@ -9,7 +9,7 @@ const COMMANDS = [
     { id: "home", group: "Quick links", title: "Go to Home", subtitle: "Project landing", path: "/home", shortcut: ["G", "H"] },
     { id: "about", group: "Quick links", title: "Open About", subtitle: "Author & project notes", path: "/about", shortcut: ["G", "A"] },
 
-    // Animations — Page / Route
+    // Animations - Page / Route
     { id: "curtain", group: "Animations", title: "Curtain Reveal", subtitle: "Wipe overlay (transform/clip-path)", path: "/curtain-reveal" },
     { id: "book", group: "Animations", title: "Book-flip", subtitle: "Perspective rotateY", path: "/book-flip" },
     { id: "stack", group: "Animations", title: "Slide-over Stack", subtitle: "New page pushes previous", path: "/slide-over-stack" },
@@ -192,7 +192,7 @@ export default function CommandPaletteZoomIn() {
             <Styled.Wrapper>
                 <Styled.Header>
                     <div className="heading">
-                        <h1>Command Palette — Zoom-in</h1>
+                        <h1>Command Palette - Zoom-in</h1>
                         <p className="muted">
                             Press <kbd className="kbd">Ctrl</kbd>/<kbd className="kbd">⌘</kbd>+<kbd className="kbd">K</kbd> or <kbd className="kbd">/</kbd> to open. Type to filter.
                         </p>

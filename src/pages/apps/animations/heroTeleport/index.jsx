@@ -12,8 +12,8 @@ const TEMPLATES = [
             "A shared-element transition where a hero moves between layouts using a common layoutId. " +
             "Great for list→detail, dashboard→panel, or card→header morphs.",
         bullets: [
-            "One element, two places—Framer reconciles the geometry",
-            "No manual tweening—just consistent layoutId + layout containers",
+            "One element, two places-Framer reconciles the geometry",
+            "No manual tweening-just consistent layoutId + layout containers",
             "Works across nested trees inside a LayoutGroup",
         ],
     },
@@ -64,7 +64,7 @@ export default function HeroTeleport() {
     // Alternate the hero’s “home” container every step (left on even, right on odd)
     const side = index % 2 === 0 ? "left" : "right";
 
-    // Layout transitions—snappy but premium
+    // Layout transitions-snappy but premium
     const heroTransition = useMemo(
         () => ({ type: "spring", stiffness: 600, damping: 50, mass: 0.8 }),
         []

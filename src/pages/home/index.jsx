@@ -38,7 +38,7 @@ const Home = () => {
     return (
         <>
             <Styled.Wrapper>
-                <h3>Framer Motion Demos — last updated: <time dateTime={LAST_ISO || ""}>{lastUpdatedLabel}</time></h3>
+                <h3>Framer Motion Demos - last updated: <time dateTime={LAST_ISO || ""}>{lastUpdatedLabel}</time></h3>
 
                 <fieldset>
                     <legend>About Project</legend>
@@ -69,7 +69,7 @@ const Home = () => {
                             <h3>How to use</h3>
                             <ul>
                                 <li>Pick a demo from the left sidebar (Ctrl/Cmd + K to search).</li>
-                                <li>Each demo is self-contained and production-oriented—copy the core variant/block into your app.</li>
+                                <li>Each demo is self-contained and production-oriented-copy the core variant/block into your app.</li>
                                 <li>Animations respect <b>prefers-reduced-motion</b>; keep motion subtle for dense screens.</li>
                             </ul>
                         </div>

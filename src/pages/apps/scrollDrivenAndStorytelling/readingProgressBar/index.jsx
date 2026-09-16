@@ -29,7 +29,7 @@ const SECTIONS = [
         id: "impl",
         title: "Implementation notes",
         body:
-            "Bind to the real scroll container—not the window—especially in SPA shells. Throttle work. " +
+            "Bind to the real scroll container-not the window-especially in SPA shells. Throttle work. " +
             "Use transform scaleX for the fill. For scrollytelling, combine section reveals with stagger.",
     },
     {

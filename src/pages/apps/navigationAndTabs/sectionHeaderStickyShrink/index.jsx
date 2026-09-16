@@ -115,7 +115,7 @@ export default function SectionHeaderStickyShrink() {
             <Styled.Wrapper>
                 <Styled.Header>
                     <div className="heading">
-                        <h1>Section Header — Sticky Shrink</h1>
+                        <h1>Section Header - Sticky Shrink</h1>
                         <p className="muted">
                             Large title collapses into a compact bar as you scroll the section. Tabs get an animated underline.
                         </p>

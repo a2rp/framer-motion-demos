@@ -10,7 +10,7 @@ const TEMPLATES = [
         title: "Split Transition",
         body:
             "Two panels meet to cover, content swaps, then they split outward to reveal. " +
-            "A bold, cinematic transition—use to punctuate section changes.",
+            "A bold, cinematic transition-use to punctuate section changes.",
         bullets: [
             "Cover → swap → reveal (sequenced)",
             "Transform-only for crisp edges",
