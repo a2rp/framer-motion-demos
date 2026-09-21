@@ -1,1 +1,0 @@
-import{u as a,r as t,b as u}from"./index-Cf_T-Gf1.js";import{e as r}from"./proxy-DKYKL-ar.js";function i(o){const e=a(()=>r(o)),{isStatic:s}=t.useContext(u);if(s){const[,n]=t.useState(o);t.useEffect(()=>e.on("change",n),[])}return e}export{i as u};
