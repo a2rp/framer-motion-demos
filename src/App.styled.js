@@ -96,6 +96,16 @@ const LogoLinkWrapper = styled.div`
         &:focus-visible {
             outline: var(--focus-ring);
         }
+
+        img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            margin-right: 8px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--card);
+        }
     }
 `;
 
@@ -204,6 +214,33 @@ const Footer = styled.div`
     color: var(--text-muted);
 `;
 
+const FloatingTopButton = styled.button`
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1100;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--card);
+    color: var(--text);
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease,
+        color 0.18s ease;
+
+    &:hover,
+    &:focus-visible {
+        border-color: var(--primary);
+        box-shadow: 0 0 18px hsl(210 90% 56% / 0.3);
+        color: var(--primary);
+        outline: none;
+    }
+`;
+
 export const Styled = {
     Wrapper,
     Header,
@@ -216,4 +253,5 @@ export const Styled = {
     NavWrapper,
     Tuts,
     Footer,
+    FloatingTopButton,
 };

@@ -197,7 +197,7 @@
                     "qid": "intro-env-013",
                     "question": "How to inspect env values at runtime in dev?",
                     "answer_short": "Log `import.meta.env` in the console; don’t ship this in production builds.",
-                    "code_short": "console.log(import.meta.env);",
+                    "code_short": "const mode = import.meta.env.MODE;",
                     "notes_ref": "/notes-reactjs/intro/env-files",
                     "difficulty": "easy",
                     "topic": "intro",

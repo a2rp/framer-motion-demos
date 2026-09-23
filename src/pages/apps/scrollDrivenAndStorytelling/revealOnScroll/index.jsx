@@ -7,7 +7,7 @@ import {
     useTransform,
 } from "framer-motion";
 import { Styled, ModalOverlay } from "./styled";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 
 /* ---------- helpers ---------- */
 
@@ -382,7 +382,7 @@ export default function RevealOnScroll() {
                                                         aria-label={showPw ? "Hide password" : "Show password"}
                                                         onClick={() => setShowPw((v) => !v)}
                                                     >
-                                                        {showPw ? <AiOutlineEyeInvisible size={18} /> : <AiOutlineEye size={18} />}
+                                                        {showPw ? <FiEyeOff size={18} /> : <FiEye size={18} />}
                                                     </button>
                                                 </div>
                                                 {pwdErr && <em id="err-pwd" className="err">{pwdErr}</em>}

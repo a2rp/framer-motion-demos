@@ -60,7 +60,10 @@ const App = () => {
                     <Styled.NavLinkWrapper onClick={handleDisplayNav} title="Toggle sidebar">
                         <MdMenuOpen size={20} />
                     </Styled.NavLinkWrapper>
-                    <NavLink to="/" title="Framer Motion Demos">Framer Motion Demos</NavLink>
+                    <NavLink to="/" title="Framer Motion Demos">
+                        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Ashish Ranjan logo" />
+                        <span>Framer Motion Demos</span>
+                    </NavLink>
                 </Styled.LogoLinkWrapper>
 
                 <Styled.Heading>
@@ -93,7 +96,7 @@ const App = () => {
                 </Styled.ContentWrapper>
             </Styled.Main>
 
-            {/* <ScrollToTop /> */}
+            <ScrollToTop />
             <ToastContainer position="bottom-center" autoClose={4000} newestOnTop />
         </Styled.Wrapper>
     )
