@@ -117,6 +117,8 @@ const NavLinkWrapper = styled.div`
     cursor: pointer;
     width: 40px;
     height: 40px;
+    padding: 0;
+    font: inherit;
     display: grid;
     place-items: center;
     box-shadow: var(--shadow-sm);
@@ -156,6 +158,7 @@ const NavWrapper = styled.div`
     border-right: 1px solid var(--border);
     width: 0;
     flex: 0 0 0;
+    visibility: hidden;
     transition: 0.2s ease;
     transition-property: width, flex;
     overflow: hidden;
@@ -167,6 +170,7 @@ const NavWrapper = styled.div`
     &.active {
         flex: 0 0 250px;
         width: 250px;
+        visibility: visible;
     }
 
     @media (width < 1000px) {

@@ -91,9 +91,10 @@ const NavListCore = () => {
     }, [search]);
 
     const handleSearchChange = (e) => setSearch(e.target.value);
-    const clearSearch = () => setSearch("");
-
-    useEffect(() => { searchInputRef.current?.focus(); }, []);
+    const clearSearch = () => {
+        setSearch("");
+        searchInputRef.current?.focus();
+    };
 
     return (
         <Styled.Nav ref={navRef} aria-label="Animations navigation">
@@ -101,20 +102,29 @@ const NavListCore = () => {
                 <input
                     ref={searchInputRef}
                     type="text"
-                    placeholder="Search demos (Ctrl + K)"
+                    placeholder="Search demos (Ctrl/Cmd + K)"
                     value={search}
                     onChange={handleSearchChange}
                     aria-label="Search demos"
                     aria-controls="navlinksWrapper"
                 />
                 {search.trim().length > 0 && (
-                    <div className="clearIconWrapper" onClick={clearSearch} role="button" aria-label="Clear search" title="Clear">
-                        <MdClear size={20} />
-                    </div>
+                    <button
+                        type="button"
+                        className="clearIconWrapper"
+                        onClick={clearSearch}
+                        aria-label="Clear search"
+                        title="Clear search"
+                    >
+                        <MdClear size={20} aria-hidden="true" />
+                    </button>
                 )}
             </div>
+            <p className="matchCount" role="status" aria-live="polite">
+                {matchCount} {matchCount === 1 ? "result" : "results"}
+            </p>
 
-            <div className="navlinksWrapper" id="navlinksWrapper" ref={wrapperRef} reversed>
+            <div className="navlinksWrapper" id="navlinksWrapper" ref={wrapperRef}>
                 {/* Core */}
                 <h3 className="title">Core</h3>
                 <><NavLink to="/home" title="Home">Home</NavLink></>

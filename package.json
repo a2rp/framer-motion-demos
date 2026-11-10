@@ -1,5 +1,6 @@
 {
-    "name": "frontend",
+    "name": "framer-motion-demos",
+    "description": "Interactive React demos for Framer Motion transitions, gestures, forms, overlays, and scroll effects.",
     "private": true,
     "version": "0.0.0",
     "type": "module",

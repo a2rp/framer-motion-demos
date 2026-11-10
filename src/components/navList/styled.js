@@ -52,12 +52,33 @@ export const Styled = {
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
+                padding: 0;
+                border: 0;
+                background: transparent;
+                color: var(--text);
+
+                &:hover {
+                    background: transparent;
+                    color: var(--primary);
+                }
+
+                &:focus-visible {
+                    outline: var(--focus-ring);
+                    outline-offset: -3px;
+                }
             }
+        }
+
+        .matchCount {
+            min-height: 16px;
+            margin: -9px 0 8px;
+            color: var(--text-muted);
+            font-size: 11px;
         }
 
         .navlinksWrapper {
             /* border: 1px solid #f00; */
-            height: calc(100% - 40px);
+            height: calc(100% - 70px);
             overflow: auto;
             padding-left: 10px;
             color: #666;
